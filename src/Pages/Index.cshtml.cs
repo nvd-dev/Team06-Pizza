@@ -9,6 +9,7 @@ using ContosoCrafts.WebSite.Services;
 namespace ContosoCrafts.WebSite.Pages
 {
     /// <summary>
+    /// Pui Ching Wong
     /// Liling Yang
     /// </summary>
     public class IndexModel : PageModel
