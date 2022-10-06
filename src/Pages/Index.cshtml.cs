@@ -12,6 +12,7 @@ namespace ContosoCrafts.WebSite.Pages
     /// Pui Ching Wong
     /// Liling Yang
     /// Viet Dung Nguyen
+    /// Yu Shang
     /// </summary>
     public class IndexModel : PageModel
     {
