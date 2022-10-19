@@ -146,6 +146,8 @@ ul {
     background: linear-gradient(110deg, #252152 60%, #e9a8a6 60%);
 }
 */
+
+/* Change the Nav bar color*/
 .bg-navbar {
     background: -webkit-linear-gradient(110deg, #f1ece1 60%, #314f6f 60%);
     background: -o-linear-gradient(110deg, #f1ece1 60%, #314f6f 60%);
