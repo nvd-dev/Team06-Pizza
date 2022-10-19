@@ -112,7 +112,7 @@ html {
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
-    background-image: url("https://img.freepik.com/free-vector/light-coloured-background-with-white-balls-blur-effect-3d-round-spheres-geometric-design-elements-circle-ball-pattern_433751-186.jpg?w=1380&t=st=1665555360~exp=1665555960~hmac=9787ef3e636cb624832d9d3ce40e61b1327c6d68f580f1726ccde50fcb7dcabb")
+    background-image: url("../background-image.jpg")
 }
 p {
     font-family: 'Nunito', sans-serif;
