@@ -112,6 +112,7 @@ html {
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
+    background-image: url("../background-image.jpg")
 }
 p {
     font-family: 'Nunito', sans-serif;
