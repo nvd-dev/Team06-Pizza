@@ -36,8 +36,7 @@ namespace ContosoCrafts.WebSite.Pages
         public void OnGet()
         {
             var products = ProductService.GetAllData();
-            var id = Request.QueryString.Value;
-            Product = products.FirstOrDefault(x => x.Id.Equals(id.Split("=")[1]));
+            Product = products.FirstOrDefault(x => x.Id.Equals("jenlooper-cactus"));
         }
     }
 }
