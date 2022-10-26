@@ -18,7 +18,10 @@
             {
                 <tr>
                     <td>@product.Title</td>
-                    <td><a class="nav-link text-dark" asp-area="" asp-page="/Read" asp-route-id="@product.Id">read</a></td>
+                    <td>
+                        <a class="nav-link text-dark" asp-area="" asp-page="/Read" asp-route-id="@product.Id">read</a>
+                        <a class="nav-link text-dark" asp-area="" asp-page="/update" asp-route-id="@product.Id">update</a>
+                        </td>
                 </tr>
             }
         </tbody>
