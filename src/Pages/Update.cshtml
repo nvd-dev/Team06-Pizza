@@ -1,0 +1,21 @@
+﻿@page
+@model UpdateModel
+@{
+    ViewData["Title"] = "Developer Update";
+}
+<h1>@ViewData["Title"]</h1>
+<div class="container">
+    <label for="developerMaker">Maker</label>
+    <input class="form-control" id="developerMaker" value="@Model.Product.Maker">
+    <label for="developerTitle">Title</label>
+    <input class="form-control" id="developerTitle" value="@Model.Product.Title">
+    <label for="developerDescription">Description</label>
+    <input class="form-control" id="developerDescription" value="@Model.Product.Description">
+    <label for="developerPrice">Price</label>
+    <input class="form-control" id="developerPrice" value="@Model.Product.Price">
+    <label for="developerImage">Image</label>
+    <input class="form-control" id="developerImage" value="@Model.Product.Image">
+    <label for="developerUrl">Url</label>
+    <input class="form-control" id="developerUrl" value="@Model.Product.Url">
+    <button class="btn btn-primary">Update</button>
+</div>
