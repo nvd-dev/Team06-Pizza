@@ -3,6 +3,9 @@
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
 using System.Linq;
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Threading.Tasks;
 
 namespace ContosoCrafts.WebSite.Pages
 {
@@ -22,6 +25,7 @@ namespace ContosoCrafts.WebSite.Pages
         // Data Service
         public JsonFileProductService ProductService { get; }
 
+        [BindProperty]
         // single Data
         public ProductModel Product { get; set; }
 
@@ -29,10 +33,25 @@ namespace ContosoCrafts.WebSite.Pages
         /// REST OnGet
         /// Return all the data and find the target data
         /// </summary>
-        public void OnGet()
+        public void OnGet(String? id)
         {
-            var products = ProductService.GetAllData();
-            Product = products.FirstOrDefault(x => x.Id.Equals("jenlooper-cactus"));
+            if (id != null)
+            {
+                var products = ProductService.GetAllData();
+                Product = products.FirstOrDefault(x => x.Id.Equals(id));
+            }     
+        }
+
+        public async Task<IActionResult> OnPostAsync()
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            ProductService.UpdateData(Product);
+
+            return RedirectToPage("/Index");
         }
     }
 }
