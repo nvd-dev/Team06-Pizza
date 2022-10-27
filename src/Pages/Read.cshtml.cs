@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
@@ -33,10 +30,15 @@ namespace ContosoCrafts.WebSite.Pages
         /// REST OnGet
         /// Return all the data and find the target data
         /// </summary>
-        public void OnGet()
+        
+
+        public void OnGet(String? id)
         {
-            var products = ProductService.GetAllData();
-            Product = products.FirstOrDefault(x => x.Id.Equals("jenlooper-cactus"));
+            if (id != null)
+            {
+                var products = ProductService.GetAllData();
+                Product = products.FirstOrDefault(x => x.Id.Equals(id));
+            }
         }
     }
 }
