@@ -5,17 +5,43 @@
 }
 <h1>@ViewData["Title"]</h1>
 <div class="container">
-    <label for="developerMaker">Maker</label>
-    <input class="form-control" id="developerMaker" value="@Model.Product.Maker">
-    <label for="developerTitle">Title</label>
-    <input class="form-control" id="developerTitle" value="@Model.Product.Title">
-    <label for="developerDescription">Description</label>
-    <input class="form-control" id="developerDescription" value="@Model.Product.Description">
-    <label for="developerPrice">Price</label>
-    <input class="form-control" id="developerPrice" value="@Model.Product.Price">
-    <label for="developerImage">Image</label>
-    <input class="form-control" id="developerImage" value="@Model.Product.Image">
-    <label for="developerUrl">Url</label>
-    <input class="form-control" id="developerUrl" value="@Model.Product.Url">
-    <button class="btn btn-primary">Update</button>
+    <form method="post">
+        <input type="hidden" asp-for="Product.Id" />
+        <div class="form-group">
+            <label asp-for="Product.Maker" class="control-label"></label>
+            <input asp-for="Product.Maker" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Product.Title" class="control-label"></label>
+            <input asp-for="Product.Title" class="form-control" />
+            <span asp-validation-for="Product.Title" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Product.Description" class="control-label"></label>
+            <input asp-for="Product.Description" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Product.Price" class="control-label"></label>
+            <input asp-for="Product.Price" class="form-control" />
+            <span asp-validation-for="Product.Price" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Product.Image" class="control-label"></label>
+            <input asp-for="Product.Image" class="form-control" />
+            <span asp-validation-for="Product.Image" class="text-danger"></span>
+        </div>      
+        <div class="form-group">
+            <label asp-for="Product.Url" class="control-label"></label>
+            <input asp-for="Product.Url" class="form-control" />
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Update" class="btn btn-primary" />
+        </div>
+    </form>
 </div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
