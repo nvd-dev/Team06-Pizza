@@ -35,7 +35,7 @@ namespace UnitTests.Pages.Developer
             // Arrange
 
             // Act
-            pageModel.OnGet();
+            pageModel.OnGet("jenlooper-cactus");
 
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
