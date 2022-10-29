@@ -5,7 +5,6 @@ using ContosoCrafts.WebSite.Services;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Threading.Tasks;
 
 namespace ContosoCrafts.WebSite.Pages
 {
@@ -42,7 +41,11 @@ namespace ContosoCrafts.WebSite.Pages
             }     
         }
 
-        public async Task<IActionResult> OnPostAsync()
+        /// <summary>
+        /// REST OnPost
+        /// Update target data and Redirect To Index page
+        /// </summary>
+        public IActionResult OnPostAsync()
         {
             if (!ModelState.IsValid)
             {
