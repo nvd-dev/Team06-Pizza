@@ -144,19 +144,19 @@
     "Price": 0,
     "CommentList": []
   },
-  {
-    "Id": "vogueandcode-pretty-girls-code-tee",
-    "Maker": "vogueandcode",
-    "img": "https://user-images.githubusercontent.com/41929050/61567062-14c4b300-aa33-11e9-9dcd-8bfed4ece810.png",
-    "Url": "https://www.vogueandcode.com/shop/pretty-girls-code-tee",
-    "Title": "Pretty Girls Code Tee",
-    "Description": "Everyone\u2019s favorite design is finally here on a tee! The Pretty Girls Code crew-neck tee is available in a soft pink with red writing.",
-    "Ratings": null,
-    "ProductType": 0,
-    "Quantity": null,
-    "Price": 0,
-    "CommentList": []
-  },
+    {
+        "Id": "vogueandcode-pretty-girls-code-tee",
+        "Maker": "vogueandcode",
+        "img": "https://user-images.githubusercontent.com/41929050/61567062-14c4b300-aa33-11e9-9dcd-8bfed4ece810.png",
+        "Url": "https://www.vogueandcode.com/shop/pretty-girls-code-tee",
+        "Title": "Hiring a Ruby Developer",
+        "Description": "\tI am a Software Engineer with over 5 years of experience working on Ruby on Rails applications. I can help with fixing bugs or adding new features to existing Ruby on Rails applications.",
+        "Ratings": null,
+        "ProductType": 0,
+        "Quantity": null,
+        "Price": 0,
+        "CommentList": []
+    },
   {
     "Id": "vogueandcode-ruby-sis-2",
     "Maker": "vogueandcode",
