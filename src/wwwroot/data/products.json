@@ -25,19 +25,19 @@
     "Price": 0,
     "CommentList": []
   },
-  {
-    "Id": "jenlooper-lightshow",
-    "Maker": "@jenlooper",
-    "img": "https://user-images.githubusercontent.com/41929050/61567053-13938600-aa33-11e9-9780-104fe4019659.png",
-    "Url": "https://www.hackster.io/agent-hawking-1/bling-your-laptop-with-an-internet-connected-light-show-30e4db",
-    "Title": "Bling your Laptop with an Internet-Connected Light Show",
-    "Description": "Create a web-connected light-strip API controllable from your website, using the Particle.io.",
-    "Ratings": null,
-    "ProductType": 55,
-    "Quantity": null,
-    "Price": 0,
-    "CommentList": []
-  },
+    {
+        "Id": "jenlooper-lightshow",
+        "Maker": "@jenlooper",
+        "img": "https://user-images.githubusercontent.com/41929050/61567053-13938600-aa33-11e9-9780-104fe4019659.png",
+        "Url": "https://www.hackster.io/agent-hawking-1/bling-your-laptop-with-an-internet-connected-light-show-30e4db",
+        "Title": "Hiring an iOS Developer",
+        "Description": "I am an expert iOS app developer for your mobile app development requirements. I can develop iOS apps with high standards and great quality for your request.",
+        "Ratings": null,
+        "ProductType": 55,
+        "Quantity": null,
+        "Price": 0,
+        "CommentList": []
+    },
   {
     "Id": "jenlooper-survival",
     "Maker": "jenlooper",
@@ -150,7 +150,7 @@
         "img": "https://user-images.githubusercontent.com/41929050/61567062-14c4b300-aa33-11e9-9dcd-8bfed4ece810.png",
         "Url": "https://www.vogueandcode.com/shop/pretty-girls-code-tee",
         "Title": "Hiring a Ruby Developer",
-        "Description": "\tI am a Software Engineer with over 5 years of experience working on Ruby on Rails applications. I can help with fixing bugs or adding new features to existing Ruby on Rails applications.",
+        "Description": "I am a Software Engineer with over 5 years of experience working on Ruby on Rails applications. I can help with fixing bugs or adding new features to existing Ruby on Rails applications.",
         "Ratings": null,
         "ProductType": 0,
         "Quantity": null,
