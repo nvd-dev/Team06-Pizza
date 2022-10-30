@@ -1,34 +1,34 @@
 [
-  {
-    "Id": "jenlooper-cactus",
-    "Maker": "@jenlooper",
-    "img": "https://user-images.githubusercontent.com/47729520/197583870-eb10b422-cfb8-41f8-aee6-c76e02563630.svg",
-    "Url": "https://www.hackster.io/agent-hawking-1/the-quantified-cactus-an-easy-plant-soil-moisture-sensor-e65393",
-    "Title": "Hiring a Python Developer",
-    "Description": "Hey this is Howard. Welcome to my GIG. I am here with my team to do your WEB DESIGN and WEBSITE DEVELOPMENT.",
-    "Ratings": [ 5, 3, 4, 3, 5, 4, 5, 4, 3, 5, 4, 5, 4 ],
-    "ProductType": 55,
-    "Quantity": null,
-    "Price": 0,
-    "CommentList": []
-  },
-  {
-    "Id": "jenlooper-light",
-    "Maker": "jenlooper",
-    "img": "https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/907884/regular_800x320_cover-0816-C__Mistakes-Waldek_Newsletter-8ca5fb6eacb673aaad1fe4bfaf4ce205-2f26062f759e8698edd8c5d77b82b992.png",
-    "Url": "https://www.hackster.io/agent-hawking-1/book-light-dee7e4",
-    "Title": "Hiring a C++ Developer",
-    "Description": "Are you looking for expert who can assists you on your C++ projects? I am here to help you out!",
-    "Ratings": [ 4, 3, 4, 3, 4, 3 ],
-    "ProductType": 1,
-    "Quantity": null,
-    "Price": 0,
-    "CommentList": []
-  },
+    {
+        "Id": "jenlooper-cactus",
+        "Maker": "@jenlooper",
+        "img": "https://user-images.githubusercontent.com/47729520/198867455-0a81e4c4-e881-4f5d-806e-2f4db18518d3.png",
+        "Url": "https://www.hackster.io/agent-hawking-1/the-quantified-cactus-an-easy-plant-soil-moisture-sensor-e65393",
+        "Title": "Hiring a Python Developer",
+        "Description": "Hey this is Howard. Welcome to my GIG. I am here with my team to do your WEB DESIGN and WEBSITE DEVELOPMENT.",
+        "Ratings": [ 5, 3, 4, 3, 5, 4, 5, 4, 3, 5, 4, 5, 4 ],
+        "ProductType": 55,
+        "Quantity": null,
+        "Price": 0,
+        "CommentList": []
+    },
+    {
+        "Id": "jenlooper-light",
+        "Maker": "jenlooper",
+        "img": "https://user-images.githubusercontent.com/47729520/198867452-53306239-947b-4b90-a18a-07c4c9a01d06.jpeg",
+        "Url": "https://www.hackster.io/agent-hawking-1/book-light-dee7e4",
+        "Title": "Hiring a C++ Developer",
+        "Description": "Are you looking for expert who can assists you on your C++ projects? I am here to help you out!",
+        "Ratings": [ 4, 3, 4, 3, 4, 3 ],
+        "ProductType": 1,
+        "Quantity": null,
+        "Price": 0,
+        "CommentList": []
+    },
     {
         "Id": "jenlooper-lightshow",
         "Maker": "@jenlooper",
-        "img": "https://user-images.githubusercontent.com/41929050/61567053-13938600-aa33-11e9-9780-104fe4019659.png",
+        "img": "https://user-images.githubusercontent.com/47729520/198866711-33b3e516-f633-40c9-9d83-cb9978736366.png",
         "Url": "https://www.hackster.io/agent-hawking-1/bling-your-laptop-with-an-internet-connected-light-show-30e4db",
         "Title": "Hiring an iOS Developer",
         "Description": "I am an expert iOS app developer for your mobile app development requirements. I can develop iOS apps with high standards and great quality for your request.",
@@ -41,7 +41,7 @@
     {
         "Id": "jenlooper-survival",
         "Maker": "jenlooper",
-        "img": "https://user-images.githubusercontent.com/41929050/61567051-13938600-aa33-11e9-8ae7-0b5c19aafab4.jpeg",
+        "img": "https://user-images.githubusercontent.com/47729520/198866708-8f9616c8-2ea3-4f0a-bf15-1a409a45a396.jpeg",
         "Url": "https://www.hackster.io/agent-hawking-1/create-a-compact-survival-kit-38bfdb",
         "Title": "Hiring a Database Developer",
         "Description": "I am specialized in database design using MySQL. I have an experience of database design and websites integrated database development. I also have worked on WordPress eCommerce solutions using WooCommerce and have been using Yoast SEO.",
@@ -54,7 +54,7 @@
     {
         "Id": "sailorhg-bubblesortpic",
         "Maker": "sailorhg",
-        "img": "https://user-images.githubusercontent.com/41929050/61567054-13938600-aa33-11e9-9163-eec98e239b7a.png",
+        "img": "https://user-images.githubusercontent.com/47729520/198866715-d3a8953f-e6ac-4eef-a71c-13749678be28.png",
         "Url": "https://twitter.com/sailorhg/status/1090107740049952770",
         "Title": "Hiring a FAANG Software Engineer for Technical Mock Interview",
         "Description": "I am a Software Engineering Hiring Manager at a FAANG company, and passionate about helping others navigate the hiring process, excel at technical interviews and get their desired job.",
@@ -67,7 +67,7 @@
     {
         "Id": "sailorhg-corsage",
         "Maker": "sailorhg",
-        "img": "https://user-images.githubusercontent.com/114438229/197665809-c194bc87-e055-4c20-bfdb-eb28f3970165.jpeg",
+        "img": "https://user-images.githubusercontent.com/47729520/198867445-94cc4975-880c-405c-9803-eddfc2537f71.png",
         "Url": "https://twitter.com/sailorhg/status/1090113666911891456",
         "Title": "Hiring a C# Developer",
         "Description": "I am a Computer engineer student with an excellent analytical and problem-solving skills. Therefore, I find myself a right person to equip you with the solutions which you are in dire need.",
@@ -82,7 +82,7 @@
     {
         "Id": "sailorhg-kit",
         "Maker": "sailorhg",
-        "img": "https://user-images.githubusercontent.com/41929050/61567056-142c1c80-aa33-11e9-8682-10065d338145.png",
+        "img": "https://user-images.githubusercontent.com/47729520/198866712-96eec94c-6f90-4b4b-a4c3-5290d56fb60f.png",
         "Url": "https://twitter.com/sailorhg/status/1090122822007963648",
         "Title": "Hiring a Kotlin Developer",
         "Description": "I will build your android application using Kotlin with latest design patterns. I will make your application which will be easy to use for nontechnical users which will help to grow your business in market.",
@@ -95,7 +95,7 @@
     {
         "Id": "sailorhg-led",
         "Maker": "sailorhg",
-        "img": "https://user-images.githubusercontent.com/41929050/61567052-13938600-aa33-11e9-9a88-cd842073ba44.jpg",
+        "img": "https://user-images.githubusercontent.com/47729520/198866706-78cdb695-2bfe-485c-9941-4890d46ff21d.png",
         "Url": "https://twitter.com/sailorhg/status/1090117277540745216",
         "Title": "Hiring an Android Developer",
         "Description": "I'm an android mobile application developer with an experience of more than five years. I can develop apps for android with great quality, design, and high standard.",
@@ -108,7 +108,7 @@
     {
         "Id": "selinazawacki-soi-shirt",
         "Maker": "selinazawacki",
-        "img": "https://user-images.githubusercontent.com/41929050/61567060-142c1c80-aa33-11e9-8188-5a4803844a9e.png",
+        "img": "https://user-images.githubusercontent.com/47729520/198866709-00504333-bbf1-440b-b11a-df025976db26.png",
         "Url": "https://www.instagram.com/p/BNvESj-j8PI/",
         "Title": "Hiring a Chrome Extension Developer",
         "Description": "If you have an idea for a chrome extension and you are not sure how to create it and publish it, I got you as I will develop your extension with the idea you need.",
@@ -121,7 +121,7 @@
     {
         "Id": "selinazawacki-soi-pins",
         "Maker": "selinazawacki",
-        "img": "https://user-images.githubusercontent.com/41929050/61567059-142c1c80-aa33-11e9-939b-2ecf4492786d.png",
+        "img": "https://user-images.githubusercontent.com/47729520/198866707-535b2982-5f3b-483a-8f83-2520fa3635d9.png",
         "Url": "https://www.instagram.com/p/BNm6hZzDoEF/",
         "Title": "Hiring a FAANG Software Engineer for Behavioral Mock Interview",
         "Description": "I am a Software Engineering Hiring Manager at a FAANG company and passionate about helping others navigate the hiring process, excel at behavioral interviews and get their desired job.",
@@ -131,23 +131,23 @@
         "Price": 0,
         "CommentList": []
     },
-  {
-    "Id": "vogueandcode-hipster-dev-bro",
-    "Maker": "vogueandcode",
-    "img": "https://static.javatpoint.com/core/images/what-is-core-java.png",
-    "Url": "https://www.vogueandcode.com/shop/hipster-dev-bro",
-    "Title": "Hiring a Java Developer",
-    "Description": "Hi I am a software developer for five years based on java. I am really happy when my customer get satisfied when they actually get what they need. I am mainly developing java desktop application and can make web application too!",
-    "Ratings": [ 3, 5, 4, 3, 2, 4, 5, 3, 5, 4 ],
-    "ProductType": 1,
-    "Quantity": null,
-    "Price": 0,
-    "CommentList": []
-  },
+    {
+        "Id": "vogueandcode-hipster-dev-bro",
+        "Maker": "vogueandcode",
+        "img": "https://user-images.githubusercontent.com/47729520/198867454-144df61e-c1da-4ea3-a93d-7f5058e03dbc.png",
+        "Url": "https://www.vogueandcode.com/shop/hipster-dev-bro",
+        "Title": "Hiring a Java Developer",
+        "Description": "Hi I am a software developer for five years based on java. I am really happy when my customer get satisfied when they actually get what they need. I am mainly developing java desktop application and can make web application too!",
+        "Ratings": [ 3, 5, 4, 3, 2, 4, 5, 3, 5, 4 ],
+        "ProductType": 1,
+        "Quantity": null,
+        "Price": 0,
+        "CommentList": []
+    },
     {
         "Id": "vogueandcode-pretty-girls-code-tee",
         "Maker": "vogueandcode",
-        "img": "https://user-images.githubusercontent.com/41929050/61567062-14c4b300-aa33-11e9-9dcd-8bfed4ece810.png",
+        "img": "https://user-images.githubusercontent.com/47729520/198866714-063ea98d-d791-443a-b3e2-bcce22143eb3.png",
         "Url": "https://www.vogueandcode.com/shop/pretty-girls-code-tee",
         "Title": "Hiring a Ruby Developer",
         "Description": "I am a Software Engineer with over 5 years of experience working on Ruby on Rails applications. I can help with fixing bugs or adding new features to existing Ruby on Rails applications.",
@@ -160,7 +160,7 @@
     {
         "Id": "vogueandcode-ruby-sis-2",
         "Maker": "vogueandcode",
-        "img": "https://user-images.githubusercontent.com/41929050/61567063-14c4b300-aa33-11e9-8515-bcb866da9ea3.png",
+        "img": "https://user-images.githubusercontent.com/47729520/198866710-510da77c-5ec3-43f1-99f9-428c04951f61.png",
         "Url": "https://www.vogueandcode.com/shop/ruby-sis-2",
         "Title": "Hiring a Frontend Web Developer in HTML CSS JavaScript",
         "Description": "Are you looking for a Frontend Web Developer to build a responsive, stunning, and user-friendly website from scratch or looking for someone to redesign & develop your existing website, then you are in the right place!",
@@ -173,7 +173,7 @@
     {
         "Id": "selinazawacki-moon",
         "Maker": "selinazawacki",
-        "img": "https://user-images.githubusercontent.com/41929050/61567057-142c1c80-aa33-11e9-9781-9e442418eaab.png",
+        "img": "https://user-images.githubusercontent.com/47729520/198866716-ac3581c6-6fb2-4ea8-b402-35770f8845cc.png",
         "Url": "https://www.instagram.com/p/BFktVYPinKQ/",
         "Title": "Hiring a UX and UI Developer",
         "Description": "I will produce high quality UX and UI wireframes and prototypes ready for a proof of concept or polished for hand-off to a developer.",
@@ -186,7 +186,7 @@
     {
         "Id": "selinazawacki-shirt",
         "Maker": "selinazawacki",
-        "img": "https://user-images.githubusercontent.com/41929050/61567058-142c1c80-aa33-11e9-89fb-b4f30d84d69d.png",
+        "img": "https://user-images.githubusercontent.com/47729520/198866713-923dfe9b-a4de-4049-8180-0acbeae73cc1.jpeg",
         "Url": "https://www.instagram.com/p/BEXlpiZCnJ3",
         "Title": "Hiring a FAANG Software Engineer to Revise your Tech Resume",
         "Description": "I've worked on over 400+ resumes and 50+ cover letters and interviewed/received offers from top tech companies like Google, Apple, Amazon, Meta and many more. I fully understand the ins and outs of the entire recruiting process. I will provide the most detailed and thorough feedback for you.",
