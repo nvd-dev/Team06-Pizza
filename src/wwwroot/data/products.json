@@ -79,19 +79,19 @@
         "Price": 0,
         "CommentList": []
     },
-  {
-    "Id": "sailorhg-kit",
-    "Maker": "sailorhg",
-    "img": "https://user-images.githubusercontent.com/41929050/61567056-142c1c80-aa33-11e9-8682-10065d338145.png",
-    "Url": "https://twitter.com/sailorhg/status/1090122822007963648",
-    "Title": "Pastel hardware kit",
-    "Description": "Pastel hardware kits complete with custom manufactured pastel alligator clips.",
-    "Ratings": null,
-    "ProductType": 130,
-    "Quantity": null,
-    "Price": 0,
-    "CommentList": []
-  },
+    {
+        "Id": "sailorhg-kit",
+        "Maker": "sailorhg",
+        "img": "https://user-images.githubusercontent.com/41929050/61567056-142c1c80-aa33-11e9-8682-10065d338145.png",
+        "Url": "https://twitter.com/sailorhg/status/1090122822007963648",
+        "Title": "Hiring a Kotlin Developer",
+        "Description": "I will build your android application using Kotlin with latest design patterns. I will make your application which will be easy to use for nontechnical users which will help to grow your business in market.",
+        "Ratings": null,
+        "ProductType": 130,
+        "Quantity": null,
+        "Price": 0,
+        "CommentList": []
+    },
   {
     "Id": "sailorhg-led",
     "Maker": "sailorhg",
