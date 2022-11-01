@@ -32,7 +32,7 @@ namespace ContosoCrafts.WebSite.Pages
         /// </summary>
         
 
-        public void OnGet(String? id)
+        public void OnGet(string id)
         {
             if (id != null)
             {
