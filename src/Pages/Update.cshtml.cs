@@ -32,7 +32,7 @@ namespace ContosoCrafts.WebSite.Pages
         /// REST OnGet
         /// Return all the data and find the target data
         /// </summary>
-        public void OnGet(String? id)
+        public void OnGet(string id)
         {
             if (id != null)
             {
