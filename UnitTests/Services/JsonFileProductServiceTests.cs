@@ -6,6 +6,9 @@ using ContosoCrafts.WebSite.Models;
 
 namespace UnitTests.Pages.Product.AddRating
 {
+    /// <summary>
+    /// UnitTests for JsonFileProductService
+    /// </summary>
     public class JsonFileProductServiceTests
     {
         #region TestSetup
