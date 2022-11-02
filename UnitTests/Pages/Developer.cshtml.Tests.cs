@@ -10,6 +10,9 @@ using ContosoCrafts.WebSite.Pages;
 
 namespace UnitTests.Pages.Developer
 {
+    /// <summary>
+    /// UnitTests for Developer
+    /// </summary>
     public class DeveloperTests
     {
         #region TestSetup
