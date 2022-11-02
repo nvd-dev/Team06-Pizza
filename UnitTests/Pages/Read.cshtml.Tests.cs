@@ -8,6 +8,9 @@ using ContosoCrafts.WebSite.Pages;
 
 namespace UnitTests.Pages.Developer
 {
+    /// <summary>
+    /// UnitTests for Read
+    /// </summary>
     public class ReadTests
     {
         #region TestSetup
