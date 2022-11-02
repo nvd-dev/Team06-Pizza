@@ -15,6 +15,9 @@ using Microsoft.AspNetCore.Routing;
 
 namespace UnitTests.Pages.Developer
 {
+    /// <summary>
+    /// UnitTests for Update
+    /// </summary>
     public class UpdateTests
     {
         #region TestSetup
