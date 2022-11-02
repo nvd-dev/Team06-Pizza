@@ -9,16 +9,15 @@ using ContosoCrafts.WebSite.Services;
 namespace ContosoCrafts.WebSite.Pages
 {
     /// <summary>
-    /// Pui Ching Wong
-    /// Liling Yang
-    /// Viet Dung Nguyen
-    /// Yu Shang
+    /// The homepage of the website that lists all the products
     /// </summary>
     public class IndexModel : PageModel
     {
-        //Hi Mike
         private readonly ILogger<IndexModel> _logger;
 
+        /// <summary>
+        /// Default Constructor
+        /// </summary>
         public IndexModel(ILogger<IndexModel> logger,
             JsonFileProductService productService)
         {
@@ -26,9 +25,16 @@ namespace ContosoCrafts.WebSite.Pages
             ProductService = productService;
         }
 
+        // ProductService property getter
         public JsonFileProductService ProductService { get; }
+
+        // Get method to return all the product services
         public IEnumerable<ProductModel> Products { get; private set; }
 
+        /// <summary>
+        /// REST OnGet
+        /// Return the list of all products
+        /// </summary>
         public void OnGet()
         {
             Products = ProductService.GetAllData();
