@@ -9,23 +9,30 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace ContosoCrafts.WebSite.Services
 {
-   public class JsonFileProductService
+    /// <summary>
+    /// Class to contain all the services of products
+    /// </summary>
+    public class JsonFileProductService
     {
+        // Constructor of product service class that use WebHostEnvironment to retrieve path of files
         public JsonFileProductService(IWebHostEnvironment webHostEnvironment)
         {
             WebHostEnvironment = webHostEnvironment;
         }
 
+        // Keeping the IWebHostEnvironment after getting it passed in
         public IWebHostEnvironment WebHostEnvironment { get; }
 
+        // Retrive the Product.json file and let the WebHostEnvirontment know the path of Product.json
         private string JsonFileName
         {
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "products.json"); }
         }
 
+        // Method to return all the products by retrieving data from the JSON file, then convert JSON text to product object
         public IEnumerable<ProductModel> GetAllData()
         {
-            using(var jsonFileReader = File.OpenText(JsonFileName))
+            using (var jsonFileReader = File.OpenText(JsonFileName))
             {
                 return JsonSerializer.Deserialize<ProductModel[]>(jsonFileReader.ReadToEnd(),
                     new JsonSerializerOptions
@@ -74,7 +81,7 @@ namespace ContosoCrafts.WebSite.Services
             }
 
             // Check to see if the rating exist, if there are none, then create the array
-            if(data.Ratings == null)
+            if (data.Ratings == null)
             {
                 data.Ratings = new int[] { };
             }
@@ -176,11 +183,11 @@ namespace ContosoCrafts.WebSite.Services
             var data = dataSet.FirstOrDefault(m => m.Id.Equals(id));
 
             var newDataSet = GetAllData().Where(m => m.Id.Equals(id) == false);
-            
+
             SaveData(newDataSet);
 
             return data;
         }
-        
+
     }
 }
