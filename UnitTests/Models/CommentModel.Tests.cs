@@ -1,6 +1,3 @@
-using System.Linq;
-using Microsoft.Extensions.DependencyInjection;
-using Bunit;
 using NUnit.Framework;
 using ContosoCrafts.WebSite.Models;
 
