@@ -8,6 +8,9 @@ namespace ContosoCrafts.WebSite
     /// </summary>
     public class Program
     {
+        /// <summary>
+        /// Main method to build and to run the web application
+        /// </summary>
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
