@@ -12,7 +12,7 @@ namespace ContosoCrafts.WebSite.Pages
     /// </summary>
     public class ErrorModel : PageModel
     {
-        // Get the request ID from the query
+        // Getter and setter to the request ID from the query
         public string RequestId { get; set; }
 
         // Check if requestId is valid
@@ -20,6 +20,8 @@ namespace ContosoCrafts.WebSite.Pages
 
         // Creates a logger
         private readonly ILogger<ErrorModel> _logger;
+
+        // The contructor takes a logger as a parameter, this allows for using injection testing
         public ErrorModel(ILogger<ErrorModel> logger)
         {
             _logger = logger;
