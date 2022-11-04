@@ -11,13 +11,14 @@ namespace ContosoCrafts.WebSite.Pages
         private readonly ILogger<PrivacyModel> _logger;
 
         /// <summary>
-        /// Default Constructor; create a logger
+        /// Default Constructor, it takes a logger as a parameter, this allows for using injection testing
         /// </summary> 
         public PrivacyModel(ILogger<PrivacyModel> logger)
         {
             _logger = logger;
         }
 
+        // The method contains business logic if there's any
         public void OnGet()
         {
         }
