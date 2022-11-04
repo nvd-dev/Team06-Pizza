@@ -16,7 +16,7 @@ namespace ContosoCrafts.WebSite.Pages
         private readonly ILogger<IndexModel> _logger;
 
         /// <summary>
-        /// Default Constructor
+        /// Default Constructor, it takes a logger as a parameter, this allows for using injection testing
         /// </summary>
         public IndexModel(ILogger<IndexModel> logger,
             JsonFileProductService productService)
