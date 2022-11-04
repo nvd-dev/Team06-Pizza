@@ -1,5 +1,8 @@
 ﻿namespace ContosoCrafts.WebSite.Models
 {
+    /// <summary>
+    /// Product Types
+    /// </summary>
     public enum ProductTypeEnum
     {
         Undefined = 0,
@@ -9,8 +12,14 @@
         Commercial = 55,
     }
 
+    /// <summary>
+    /// Class contain Product Type method(s)
+    /// </summary>
     public static class ProductTypeEnumExtensions
     {
+        /// <summary>
+        /// Get Product Type titles from Product Type enum
+        /// </summary>
         public static string DisplayName(this ProductTypeEnum data)
         {
             return data switch
