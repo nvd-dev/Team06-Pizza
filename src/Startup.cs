@@ -8,13 +8,20 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite
 {
+    /// <summary>
+    /// Startup class that's a part of ASP.NET web app structure
+    /// </summary>
     public class Startup
     {
+        /// <summary>
+        /// Startup method requests configuration service 
+        /// </summary>
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
+        // Get function for configuration service 
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
