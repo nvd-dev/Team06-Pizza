@@ -195,6 +195,41 @@ namespace UnitTests.Pages.Product.AddRating
         }
         #endregion CreateData
 
+        #region CreateDataFromInput
+        [Test]
+        public void CreateDataFromInput_InValid_Product_Data_Should_Return_null()
+        {
+            // Arrange
+
+            // Act
+            var result = TestHelper.ProductService.CreateDataFromInput(null);
+
+            // Assert
+            Assert.AreEqual(null, result);
+        }
+
+        [Test]
+        public void CreateDataFromInput_Valid_Product_Data_Should_Return_NewProduct()
+        {
+            // Arrange
+            var data = new ProductModel()
+            {
+                Id = System.Guid.NewGuid().ToString(),
+                Title = "Enter Title",
+                Description = "Enter Description",
+                Url = "Enter URL",
+                Image = "",
+            };
+
+            // Act
+            var result = TestHelper.ProductService.CreateDataFromInput(data);
+            var dataNew = TestHelper.ProductService.GetAllData().Last();
+
+            // Assert
+            Assert.AreEqual(dataNew.Id, result.Id);
+        }
+        #endregion CreateDataFromInput
+
         #region DeleteData
         [Test]
         public void DeleteData_Valid_Product_ID_Should_Return_Product()
