@@ -4,7 +4,7 @@ using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
 using System.Linq;
 
-namespace ContosoCrafts.WebSite.Pages
+namespace ContosoCrafts.WebSite.Pages.Read
 {
     /// <summary>
     /// return all the data to show the developer
@@ -29,7 +29,7 @@ namespace ContosoCrafts.WebSite.Pages
         /// REST OnGet
         /// Return all the data and find the target data
         /// </summary>
-        
+
 
         public void OnGet(string id)
         {
