@@ -3,10 +3,9 @@ using Microsoft.Extensions.Logging;
 using Moq;
 
 using NUnit.Framework;
+using ContosoCrafts.WebSite.Pages.Read;
 
-using ContosoCrafts.WebSite.Pages;
-
-namespace UnitTests.Pages.Developer
+namespace UnitTests.Pages.Read
 {
     /// <summary>
     /// UnitTests for Read
