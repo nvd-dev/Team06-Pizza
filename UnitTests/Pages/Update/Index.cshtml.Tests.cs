@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Routing;
 
-namespace UnitTests.Pages.Developer
+namespace UnitTests.Pages.Update
 {
     /// <summary>
     /// UnitTests for Update
