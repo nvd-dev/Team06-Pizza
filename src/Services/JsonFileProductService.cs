@@ -173,6 +173,26 @@ namespace ContosoCrafts.WebSite.Services
         }
 
         /// <summary>
+        /// Create a new product using Input values
+        /// </summary>
+        /// <returns></returns>
+        public ProductModel CreateDataFromInput(ProductModel data)
+        {
+            if (data == null)
+            {
+                return null;
+            }
+
+            // Get the current set, and append the new record to it becuase IEnumerable does not have Add
+            var dataSet = GetAllData();
+            dataSet = dataSet.Append(data);
+
+            SaveData(dataSet);
+
+            return data;
+        }
+
+        /// <summary>
         /// Remove the item from the system
         /// </summary>
         /// <returns></returns>
