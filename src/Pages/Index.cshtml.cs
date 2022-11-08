@@ -8,6 +8,7 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Pages
 {
+
     /// <summary>
     /// The homepage of the website that lists all the products
     /// </summary>
@@ -39,5 +40,7 @@ namespace ContosoCrafts.WebSite.Pages
         {
             Products = ProductService.GetAllData();
         }
+
     }
+
 }
