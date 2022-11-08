@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace UnitTests.Controllers
 {
+
     /// <summary>
     /// UnitTests for ProductsController
     /// </summary>
@@ -60,4 +61,5 @@ namespace UnitTests.Controllers
         }
         #endregion Patch
     }
+
 }
