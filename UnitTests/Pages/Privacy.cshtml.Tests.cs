@@ -8,6 +8,7 @@ using ContosoCrafts.WebSite.Pages;
 
 namespace UnitTests.Pages.Privacy
 {
+
     /// <summary>
     /// UnitTests for Privacy
     /// </summary>
@@ -26,6 +27,7 @@ namespace UnitTests.Pages.Privacy
                 PageContext = TestHelper.PageContext,
                 TempData = TestHelper.TempData,
             };
+
         }
 
         #endregion TestSetup
@@ -34,6 +36,7 @@ namespace UnitTests.Pages.Privacy
         [Test]
         public void OnGet_Valid_Activity_Set_Should_Return_RequestId()
         {
+
             // Arrange
 
             // Act
@@ -47,4 +50,5 @@ namespace UnitTests.Pages.Privacy
 
         #endregion OnGet
     }
+
 }
