@@ -6,6 +6,7 @@ using ContosoCrafts.WebSite.Models;
 
 namespace UnitTests.Pages.Product.AddRating
 {
+
     /// <summary>
     /// UnitTests for JsonFileProductService
     /// </summary>
@@ -50,6 +51,7 @@ namespace UnitTests.Pages.Product.AddRating
         [Test]
         public void AddRating_InValid_Product_Empty_Should_Return_False()
         {
+
             // Arrange
 
             // Act
@@ -62,6 +64,7 @@ namespace UnitTests.Pages.Product.AddRating
         [Test]
         public void AddRating_InValid_Product_NotExist_Should_Return_False()
         {
+
             // Arrange
 
             // Act
@@ -74,6 +77,7 @@ namespace UnitTests.Pages.Product.AddRating
         [Test]
         public void AddRating_InValid_Product_Rating_Below0_Should_Return_False()
         {
+
             // Arrange
 
             // Get the First data item
@@ -89,6 +93,7 @@ namespace UnitTests.Pages.Product.AddRating
         [Test]
         public void AddRating_InValid_Product_Rating_Above5_Should_Return_False()
         {
+
             // Arrange
 
             // Get the First data item
@@ -104,6 +109,7 @@ namespace UnitTests.Pages.Product.AddRating
         [Test]
         public void AddRating_Valid_Product_Rating_5_NoneRating_Should_Return_True()
         {
+
             // Arrange
 
             // Get the Last data item
@@ -122,6 +128,7 @@ namespace UnitTests.Pages.Product.AddRating
         [Test]
         public void AddRating_Valid_Product_Rating_5_Should_Return_True()
         {
+
             // Arrange
 
             // Get the First data item
@@ -137,12 +144,14 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.AreEqual(countOriginal + 1, dataNewList.Ratings.Length);
             Assert.AreEqual(5, dataNewList.Ratings.Last());
         }
+
         #endregion AddRating
 
         #region UpdateData
         [Test]
         public void UpdateData_InValid_Product_Data_Null_Should_Return_null()
         {
+
             // Arrange
 
             // create a data that NotExist
@@ -165,6 +174,7 @@ namespace UnitTests.Pages.Product.AddRating
         [Test]
         public void UpdateData_Valid_Product_Data_Should_Return_NewProduct()
         {
+
             // Arrange
 
             // Get the First data item
@@ -178,12 +188,14 @@ namespace UnitTests.Pages.Product.AddRating
             // Assert
             Assert.AreEqual(dataNew.Price, result.Price);
         }
+
         #endregion UpdateData
 
         #region CreateData
         [Test]
         public void CreateData_Valid_Product_Data_Should_Return_NewProduct()
         {
+
             // Arrange
 
             // Act
@@ -193,12 +205,14 @@ namespace UnitTests.Pages.Product.AddRating
             // Assert
             Assert.AreEqual(dataNew.Id, result.Id);
         }
+
         #endregion CreateData
 
         #region CreateDataFromInput
         [Test]
         public void CreateDataFromInput_InValid_Product_Data_Should_Return_null()
         {
+
             // Arrange
 
             // Act
@@ -211,6 +225,7 @@ namespace UnitTests.Pages.Product.AddRating
         [Test]
         public void CreateDataFromInput_Valid_Product_Data_Should_Return_NewProduct()
         {
+
             // Arrange
             var data = new ProductModel()
             {
@@ -228,12 +243,14 @@ namespace UnitTests.Pages.Product.AddRating
             // Assert
             Assert.AreEqual(dataNew.Id, result.Id);
         }
+
         #endregion CreateDataFromInput
 
         #region DeleteData
         [Test]
         public void DeleteData_Valid_Product_ID_Should_Return_Product()
         {
+
             // Arrange
 
             // Get the Last data item
@@ -247,6 +264,8 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.AreEqual(data.Id, result.Id);
             Assert.AreEqual(null, productData);
         }
+
         #endregion DeleteData
     }
+
 }
