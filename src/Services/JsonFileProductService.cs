@@ -9,11 +9,13 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace ContosoCrafts.WebSite.Services
 {
+
     /// <summary>
     /// Class to contain all the services of products
     /// </summary>
     public class JsonFileProductService
     {
+
         // Constructor of product service class that use WebHostEnvironment to retrieve path of files
         public JsonFileProductService(IWebHostEnvironment webHostEnvironment)
         {
@@ -39,7 +41,9 @@ namespace ContosoCrafts.WebSite.Services
                     {
                         PropertyNameCaseInsensitive = true
                     });
+
             }
+
         }
 
         /// <summary>
@@ -53,6 +57,7 @@ namespace ContosoCrafts.WebSite.Services
         /// <param name="rating"></param>
         public bool AddRating(string productId, int rating)
         {
+
             // If the ProductID is invalid, return
             if (string.IsNullOrEmpty(productId))
             {
@@ -112,16 +117,8 @@ namespace ContosoCrafts.WebSite.Services
                 return null;
             }
 
-            // Update the data to the new passed in values
-            productData.Title = data.Title;
-            productData.Description = data.Description.Trim();
-            productData.Url = data.Url;
-            productData.Image = data.Image;
 
-            productData.Quantity = data.Quantity;
-            productData.Price = data.Price;
 
-            productData.CommentList = data.CommentList;
 
             SaveData(products);
 
@@ -198,6 +195,7 @@ namespace ContosoCrafts.WebSite.Services
         /// <returns></returns>
         public ProductModel DeleteData(string id)
         {
+
             // Get the current set, and append the new record to it
             var dataSet = GetAllData();
             var data = dataSet.FirstOrDefault(m => m.Id.Equals(id));
@@ -210,4 +208,5 @@ namespace ContosoCrafts.WebSite.Services
         }
 
     }
+
 }
