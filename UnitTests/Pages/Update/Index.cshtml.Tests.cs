@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Routing;
 
 namespace UnitTests.Pages.Update
 {
+
     /// <summary>
     /// UnitTests for Update
     /// </summary>
@@ -32,6 +33,7 @@ namespace UnitTests.Pages.Update
             pageModel = new UpdateModel(TestHelper.ProductService)
             {
             };
+
         }
 
         #endregion TestSetup
@@ -40,6 +42,7 @@ namespace UnitTests.Pages.Update
         [Test]
         public void OnGet_Valid_Should_Return_Products()
         {
+
             // Arrange
 
             // Act
@@ -49,12 +52,14 @@ namespace UnitTests.Pages.Update
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
             Assert.AreEqual("jenlooper-cactus", pageModel.Product.Id);
         }
+
         #endregion OnGet
 
         #region OnPostAsync
         [Test]
         public void OnPostAsync_ModelStateIsInvalid_Should_Return_APageResult()
         {
+
             // Arrange
             var modelState = new ModelStateDictionary();
             var httpContext = new DefaultHttpContext();
@@ -66,12 +71,14 @@ namespace UnitTests.Pages.Update
             {
                 ViewData = viewData
             };
+
             var pageModel = new UpdateModel(TestHelper.ProductService)
             {
                 PageContext = pageContext,
                 TempData = tempData,
                 Url = new UrlHelper(actionContext)
             };
+
             pageModel.ModelState.AddModelError("Product.Price", "Value for Price must be between -1 and 100.");
 
             // Act
@@ -84,6 +91,7 @@ namespace UnitTests.Pages.Update
         [Test]
         public void OnPostAsync_ModelStateIsValid_Should_Return_ARedirectToPageResult()
         {
+
             // Arrange
             var modelState = new ModelStateDictionary();
             var httpContext = new DefaultHttpContext();
@@ -95,6 +103,7 @@ namespace UnitTests.Pages.Update
             {
                 ViewData = viewData
             };
+
             var pageModel = new UpdateModel(TestHelper.ProductService)
             {
                 PageContext = pageContext,
@@ -109,6 +118,8 @@ namespace UnitTests.Pages.Update
             // Assert
             Assert.IsInstanceOf<RedirectToPageResult>(result);
         }
+
         #endregion OnPostAsync
     }
+
 }
