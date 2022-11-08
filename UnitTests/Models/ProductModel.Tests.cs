@@ -3,6 +3,7 @@ using ContosoCrafts.WebSite.Models;
 
 namespace UnitTests.Models
 {
+
     /// <summary>
     /// UnitTests for ProductModel
     /// </summary>
@@ -30,4 +31,5 @@ namespace UnitTests.Models
         }
         #endregion ToString
     }
+
 }
