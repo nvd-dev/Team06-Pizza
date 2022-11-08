@@ -7,6 +7,7 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Controllers
 {
+
     /// <summary>
     /// Controller class to handle incoming requests 
     /// </summary>
@@ -14,6 +15,7 @@ namespace ContosoCrafts.WebSite.Controllers
     [Route("[controller]")]
     public class ProductsController : ControllerBase
     {
+
         /// <summary>
         /// Contructor for controller class to handle incoming requests
         /// </summary>
@@ -25,7 +27,6 @@ namespace ContosoCrafts.WebSite.Controllers
 
         // ProductService property getter
         public JsonFileProductService ProductService { get; }
-
 
         // Get method to return all the product services
         [HttpGet]
@@ -52,11 +53,14 @@ namespace ContosoCrafts.WebSite.Controllers
         /// </summary>
         public class RatingRequest
         {
+
             // Id of product service to update
             public string ProductId { get; set; }
 
             // Rating of product service to update
             public int Rating { get; set; }
         }
+
     }
+
 }
