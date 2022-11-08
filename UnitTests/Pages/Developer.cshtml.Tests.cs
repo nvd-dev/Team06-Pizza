@@ -10,6 +10,7 @@ using ContosoCrafts.WebSite.Pages;
 
 namespace UnitTests.Pages.Developer
 {
+
     /// <summary>
     /// UnitTests for Developer
     /// </summary>
@@ -27,6 +28,7 @@ namespace UnitTests.Pages.Developer
             pageModel = new DeveloperModel(TestHelper.ProductService)
             {
             };
+
         }
 
         #endregion TestSetup
@@ -35,6 +37,7 @@ namespace UnitTests.Pages.Developer
         [Test]
         public void OnGet_Valid_Should_Return_Products()
         {
+
             // Arrange
 
             // Act
@@ -44,6 +47,8 @@ namespace UnitTests.Pages.Developer
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
             Assert.AreEqual(true, pageModel.Products.ToList().Any());
         }
+
         #endregion OnGet
     }
+
 }
