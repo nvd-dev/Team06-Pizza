@@ -3,6 +3,7 @@ using ContosoCrafts.WebSite.Models;
 
 namespace UnitTests.Models
 {
+
     /// <summary>
     /// UnitTests for ProductTypeEnumModel
     /// </summary>
@@ -90,4 +91,5 @@ namespace UnitTests.Models
         }
         #endregion Null
     }
+
 }
