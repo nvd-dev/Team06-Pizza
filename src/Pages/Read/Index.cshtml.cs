@@ -3,6 +3,7 @@
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
 using System.Linq;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ContosoCrafts.WebSite.Pages.Read
 {
@@ -27,17 +28,23 @@ namespace ContosoCrafts.WebSite.Pages.Read
 
         /// <summary>
         /// REST OnGet
-        /// Return all the data and find the target data
+        /// Return all the data and find the target data, also redirect to Homepage if the URL is not valid
         /// </summary>
-
-
-        public void OnGet(string id)
+        public IActionResult OnGet(string id)
         {
-            if (id != null)
+            var products = ProductService.GetAllData();
+            Product = products.FirstOrDefault(x => x.Id.Equals(id));
+
+
+            if (Product == null)
             {
-                var products = ProductService.GetAllData();
-                Product = products.FirstOrDefault(x => x.Id.Equals(id));
+                return RedirectToPage("../Index");
             }
+
+            return Page();
+
         }
+
     }
+
 }
