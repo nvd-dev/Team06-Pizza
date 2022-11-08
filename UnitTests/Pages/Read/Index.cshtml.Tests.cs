@@ -7,6 +7,7 @@ using ContosoCrafts.WebSite.Pages.Read;
 
 namespace UnitTests.Pages.Read
 {
+
     /// <summary>
     /// UnitTests for Read
     /// </summary>
@@ -24,6 +25,7 @@ namespace UnitTests.Pages.Read
             pageModel = new ReadModel(TestHelper.ProductService)
             {
             };
+
         }
 
         #endregion TestSetup
@@ -32,6 +34,7 @@ namespace UnitTests.Pages.Read
         [Test]
         public void OnGet_Valid_Should_Return_Products()
         {
+
             // Arrange
 
             // Act
@@ -42,5 +45,7 @@ namespace UnitTests.Pages.Read
             Assert.AreEqual("jenlooper-cactus", pageModel.Product.Id);
         }
         #endregion OnGet
+
     }
+
 }
