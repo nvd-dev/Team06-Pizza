@@ -5,11 +5,13 @@ using System.Collections.Generic;
 
 namespace ContosoCrafts.WebSite.Models
 {
+
     /// <summary>
     /// Product class that contain all the properties of a product object
     /// </summary>
     public class ProductModel
     {
+
         // A property contain the ID of the product
         public string Id { get; set; }
 
@@ -48,6 +50,6 @@ namespace ContosoCrafts.WebSite.Models
 
         public override string ToString() => JsonSerializer.Serialize<ProductModel>(this);
 
-
     }
+
 }
