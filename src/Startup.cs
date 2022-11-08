@@ -8,11 +8,13 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite
 {
+
     /// <summary>
     /// Startup class that's a part of ASP.NET web app structure
     /// </summary>
     public class Startup
     {
+
         /// <summary>
         /// Startup method requests configuration service 
         /// </summary>
@@ -41,9 +43,11 @@ namespace ContosoCrafts.WebSite
             {
                 app.UseDeveloperExceptionPage();
             }
+
             else
             {
                 app.UseExceptionHandler("/Error");
+
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
@@ -68,6 +72,9 @@ namespace ContosoCrafts.WebSite
                 //     return context.Response.WriteAsync(json);
                 // });
             });
+
         }
+
     }
+
 }
