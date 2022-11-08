@@ -10,6 +10,7 @@ using ContosoCrafts.WebSite.Pages;
 
 namespace UnitTests.Pages.Error
 {
+
     /// <summary>
     /// UnitTests for Error
     /// </summary>
@@ -28,6 +29,7 @@ namespace UnitTests.Pages.Error
                 PageContext = TestHelper.PageContext,
                 TempData = TestHelper.TempData,
             };
+
         }
 
         #endregion TestSetup
@@ -36,6 +38,7 @@ namespace UnitTests.Pages.Error
         [Test]
         public void OnGet_Valid_Activity_Set_Should_Return_RequestId()
         {
+
             // Arrange
 
             Activity activity = new Activity("activity");
@@ -55,6 +58,7 @@ namespace UnitTests.Pages.Error
         [Test]
         public void OnGet_InValid_Activity_Null_Should_Return_TraceIdentifier()
         {
+
             // Arrange
 
             // Act
@@ -67,6 +71,8 @@ namespace UnitTests.Pages.Error
             Assert.AreEqual("trace", pageModel.RequestId);
             Assert.AreEqual(true, pageModel.ShowRequestId);
         }
+
         #endregion OnGet
     }
+
 }
