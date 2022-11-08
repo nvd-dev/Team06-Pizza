@@ -7,11 +7,13 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Pages
 {
+
     /// <summary>
     /// return all the data to show the developer
     /// </summary>
     public class DeveloperModel : PageModel
     {
+
         /// <summary>
         /// Default Constructor
         /// </summary>
@@ -34,5 +36,7 @@ namespace ContosoCrafts.WebSite.Pages
         {
             Products = ProductService.GetAllData();
         }
+
     }
+
 }
