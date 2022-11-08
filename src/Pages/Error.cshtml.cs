@@ -6,12 +6,14 @@ using Microsoft.Extensions.Logging;
 
 namespace ContosoCrafts.WebSite.Pages
 {
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     /// <summary>
     /// The Error page to show the error message
     /// </summary>
     public class ErrorModel : PageModel
     {
+
         // Getter and setter to the request ID from the query
         public string RequestId { get; set; }
 
@@ -35,5 +37,7 @@ namespace ContosoCrafts.WebSite.Pages
         {
             RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
         }
+
     }
+
 }
