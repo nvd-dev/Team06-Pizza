@@ -3,6 +3,7 @@ using ContosoCrafts.WebSite.Models;
 
 namespace UnitTests.Models
 {
+
     /// <summary>
     /// UnitTests for CommentModel
     /// </summary>
@@ -45,4 +46,5 @@ namespace UnitTests.Models
         }
         #endregion Commen
     }
+
 }
