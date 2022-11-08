@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 
 namespace ContosoCrafts.WebSite.Pages
 {
+
     /// <summary>
     /// The privacy policy page 
     /// </summary>
@@ -22,5 +23,7 @@ namespace ContosoCrafts.WebSite.Pages
         public void OnGet()
         {
         }
+
     }
+
 }
