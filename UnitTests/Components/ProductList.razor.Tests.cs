@@ -21,6 +21,7 @@ namespace UnitTests.Components
         [Test]
         public void ProductList_Default_Should_Return_Content()
         {
+
             // Arrange
             Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
 
@@ -33,5 +34,7 @@ namespace UnitTests.Components
             // Assert
             Assert.AreEqual(true, result.Contains("Hiring a Python Developer"));
         }
+
     }
+
 }
