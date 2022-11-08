@@ -14,6 +14,7 @@ using ContosoCrafts.WebSite.Services;
 
 namespace UnitTests
 {
+
     /// <summary>
     /// Helper to hold the web start settings
     ///
@@ -75,5 +76,7 @@ namespace UnitTests
 
             productService = new JsonFileProductService(TestHelper.MockWebHostEnvironment.Object);
         }
+
     }
+
 }
