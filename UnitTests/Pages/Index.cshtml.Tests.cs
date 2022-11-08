@@ -10,6 +10,7 @@ using ContosoCrafts.WebSite.Pages;
 
 namespace UnitTests.Pages.Index
 {
+
     /// <summary>
     /// UnitTests for Index
     /// </summary>
@@ -27,6 +28,7 @@ namespace UnitTests.Pages.Index
             pageModel = new IndexModel(MockLoggerDirect, TestHelper.ProductService)
             {
             };
+
         }
 
         #endregion TestSetup
@@ -35,6 +37,7 @@ namespace UnitTests.Pages.Index
         [Test]
         public void OnGet_Valid_Should_Return_Products()
         {
+
             // Arrange
 
             // Act
@@ -44,6 +47,8 @@ namespace UnitTests.Pages.Index
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
             Assert.AreEqual(true, pageModel.Products.ToList().Any());
         }
+
         #endregion OnGet
     }
+
 }
