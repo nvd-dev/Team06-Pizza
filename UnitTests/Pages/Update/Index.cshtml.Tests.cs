@@ -53,6 +53,18 @@ namespace UnitTests.Pages.Update
             Assert.AreEqual("jenlooper-cactus", pageModel.Product.Id);
         }
 
+        [Test]
+        public void OnGet_InValid_Id_Should_Return_ARedirectToPageResult()
+        {
+            // Arrange
+
+            // Act
+            var result = pageModel.OnGet("test");
+
+            // Assert
+            Assert.IsInstanceOf<RedirectToPageResult>(result);
+        }
+
         #endregion OnGet
 
         #region OnPostAsync
