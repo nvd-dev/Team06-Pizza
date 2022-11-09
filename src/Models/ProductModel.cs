@@ -26,7 +26,7 @@ namespace ContosoCrafts.WebSite.Models
         public string Url { get; set; }
 
         // A property contain the title or the name of the product
-        [StringLength(maximumLength: 33, MinimumLength = 1, ErrorMessage = "The Title should have a length of more than {2} and less than {1}")]
+        [StringLength(maximumLength: 70, MinimumLength = 1, ErrorMessage = "The Title should have a length of more than {2} and less than {1}")]
         public string Title { get; set; }
 
         // A property contain the description of the product
