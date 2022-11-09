@@ -4,6 +4,7 @@ using Moq;
 
 using NUnit.Framework;
 using ContosoCrafts.WebSite.Pages.Read;
+using Microsoft.AspNetCore.Mvc;
 
 namespace UnitTests.Pages.Read
 {
@@ -31,6 +32,8 @@ namespace UnitTests.Pages.Read
         #endregion TestSetup
 
         #region OnGet
+
+
         [Test]
         public void OnGet_Valid_Should_Return_Products()
         {
@@ -43,6 +46,18 @@ namespace UnitTests.Pages.Read
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
             Assert.AreEqual("jenlooper-cactus", pageModel.Product.Id);
+        }
+
+        [Test]
+        public void OnGet_InValid_Id_Should_Return_ARedirectToPageResult()
+        {
+            // Arrange
+
+            // Act
+            var result = pageModel.OnGet("test");
+
+            // Assert
+            Assert.IsInstanceOf<RedirectToPageResult>(result);
         }
         #endregion OnGet
 
