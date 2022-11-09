@@ -1,0 +1,28 @@
+@using ContosoCrafts.WebSite.Models
+@using ContosoCrafts.WebSite.Services
+@using Microsoft.AspNetCore.Components.Web
+@inject JsonFileProductService ProductService
+
+<div class="container developer-container">
+    <a class="btn btn-primary" href="/Create">+ Create</a>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in ProductService.GetAllData())
+            {
+                <tr>
+                    <td>@product.Title</td>
+                    <td>
+                        <a class="btn btn-info" href="/Read?id=@product.Id">read</a>
+                        <a class="btn btn-primary" href="/update?id=@product.Id">update</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
