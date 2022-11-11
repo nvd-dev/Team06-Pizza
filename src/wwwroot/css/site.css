@@ -271,3 +271,15 @@ ul {
 .active, .dot:hover {
     background-color: #717171;
 }
+
+/* The search panel */
+.search-panel {
+    margin-bottom: 10px;
+}
+
+.search-panel button {
+    border: 1px solid #ced4da;
+    border-left: none;
+    border-bottom-left-radius: unset;
+    border-top-left-radius: unset;
+}
