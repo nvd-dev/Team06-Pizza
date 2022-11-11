@@ -47,6 +47,22 @@ namespace ContosoCrafts.WebSite.Services
         }
 
         /// <summary>
+        /// Search data by key
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<ProductModel> GetFilterData(string key)
+        {
+            var products = GetAllData();
+
+            if (key == null)
+            {
+                return products;
+            }
+
+            return products.Where(x => x.Title.ToLower().Contains(key.ToLower()));
+        }
+
+        /// <summary>
         /// Add Rating
         /// 
         /// Take in the product ID and the rating
