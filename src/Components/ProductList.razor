@@ -3,24 +3,61 @@
 @using Microsoft.AspNetCore.Components.Web
 @inject JsonFileProductService ProductService
 
-<div class="card-columns">
-    @foreach (var product in ProductService.GetAllData())
-    {
-        <div class="card">
-            <div class="card-img" style="background-image: url('@product.Image');">
-            </div>
-            <div class="overlay">
-                <h5 class="card-title text">@product.Title</h5>
-                <small class="btn-text">
-                    <button @onclick="(e => SelectProduct(product.Id))"
-                        data-toggle="modal" data-target="#productModal" class="btn btn-primary">
-                        More Info
-                    </button>
-                </small>
-            </div>
+<div class="row search-panel">
+    <div class="col-lg-6"></div>
+    <div class="col-lg-6">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for..." @bind="searchKey" @onkeypress="onKeyPress">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button" @onclick="(e => SearchProducts())">Search</button>
+            </span>
         </div>
-    }
+    </div>
 </div>
+
+@if (productLists == null)
+{
+    <div class="card-columns">
+        @foreach (var product in ProductService.GetAllData())
+        {
+            <div class="card">
+                <div class="card-img" style="background-image: url('@product.Image');">
+                </div>
+                <div class="overlay">
+                    <h5 class="card-title text">@product.Title</h5>
+                    <small class="btn-text">
+                        <button @onclick="(e => SelectProduct(product.Id))"
+                        data-toggle="modal" data-target="#productModal" class="btn btn-primary">
+                            More Info
+                        </button>
+                    </small>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@if (productLists != null)
+{
+    <div class="card-columns">
+        @foreach (var product in productLists)
+        {
+            <div class="card">
+                <div class="card-img" style="background-image: url('@product.Image');">
+                </div>
+                <div class="overlay">
+                    <h5 class="card-title text">@product.Title</h5>
+                    <small class="btn-text">
+                        <button @onclick="(e => SelectProduct(product.Id))"
+                        data-toggle="modal" data-target="#productModal" class="btn btn-primary">
+                            More Info
+                        </button>
+                    </small>
+                </div>
+            </div>
+        }
+    </div>
+}
 
 @if (selectedProduct != null)
 {
@@ -75,6 +112,22 @@
 {
     ProductModel selectedProduct;
     string selectedProductId;
+    IEnumerable<ProductModel> productLists;
+    string searchKey;
+
+    async Task onKeyPress(KeyboardEventArgs e)
+    {
+        if (e.Code == "Enter")
+        {
+            await Task.Delay(500);
+            SearchProducts();
+        }
+    }
+
+    void SearchProducts()
+    {
+        productLists = ProductService.GetFilterData(searchKey);
+    }
 
     void SelectProduct(string productId)
     {
