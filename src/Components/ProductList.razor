@@ -9,7 +9,7 @@
         <div class="input-group">
             <input type="text" class="form-control" placeholder="Search for..." @bind="searchKey" @onkeypress="onKeyPress">
             <span class="input-group-btn">
-                <button class="btn btn-default" type="button" @onclick="(e => SearchProducts())">Search</button>
+                <button class="btn btn-default search-action" type="button" @onclick="(e => SearchProducts())">Search</button>
             </span>
         </div>
     </div>
@@ -27,7 +27,7 @@
                     <h5 class="card-title text">@product.Title</h5>
                     <small class="btn-text">
                         <button @onclick="(e => SelectProduct(product.Id))"
-                        data-toggle="modal" data-target="#productModal" class="btn btn-primary">
+                        data-toggle="modal" data-target="#productModal" class="btn btn-primary @product.Id">
                             More Info
                         </button>
                     </small>
@@ -49,7 +49,7 @@
                     <h5 class="card-title text">@product.Title</h5>
                     <small class="btn-text">
                         <button @onclick="(e => SelectProduct(product.Id))"
-                        data-toggle="modal" data-target="#productModal" class="btn btn-primary">
+                        data-toggle="modal" data-target="#productModal" class="btn btn-primary @product.Id">
                             More Info
                         </button>
                     </small>
@@ -120,7 +120,7 @@
         if (e.Code == "Enter")
         {
             await Task.Delay(500);
-            SearchProducts();
+            productLists = ProductService.GetFilterData(searchKey);
         }
     }
 
