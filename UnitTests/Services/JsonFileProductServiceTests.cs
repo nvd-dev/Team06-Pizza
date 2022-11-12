@@ -266,6 +266,35 @@ namespace UnitTests.Pages.Product.AddRating
         }
 
         #endregion DeleteData
+
+        #region SearchData
+        [Test]
+        public void GetFilterData_InValid_Key_Should_Return_AllProducts()
+        {
+
+            // Arrange
+
+            // Act
+            var result = TestHelper.ProductService.GetFilterData(null);
+            var allDatas = TestHelper.ProductService.GetAllData();
+
+            // Assert
+            Assert.AreEqual(allDatas.Count(), result.Count());
+        }
+
+        [Test]
+        public void GetFilterData_Valid_Key_Should_Return_Products()
+        {
+
+            // Arrange
+
+            // Act
+            var result = TestHelper.ProductService.GetFilterData("Python");
+
+            // Assert
+            Assert.AreEqual(1, result.Count());
+        }
+        #endregion SearchData
     }
 
 }
