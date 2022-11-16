@@ -4,7 +4,6 @@ using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics.Metrics;
 
 namespace ContosoCrafts.WebSite.Pages
 {
