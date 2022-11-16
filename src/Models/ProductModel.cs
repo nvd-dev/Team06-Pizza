@@ -45,7 +45,9 @@ namespace ContosoCrafts.WebSite.Models
         [Range(0, 10000, ErrorMessage = "Value for {0} must be between {1} and {2}.")]
         public uint Price { get; set; }
 
-        // Store the Comments entered by the users on this product
+        /// <summary>
+        /// Convert ProductModel to Json String and store the Comments entered by the users on this product
+        /// </summary>
         public List<CommentModel> CommentList { get; set; } = new List<CommentModel>();
 
         public override string ToString() => JsonSerializer.Serialize<ProductModel>(this);
