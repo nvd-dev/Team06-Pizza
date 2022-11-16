@@ -18,7 +18,10 @@ namespace ContosoCrafts.WebSite
             CreateHostBuilder(args).Build().Run();
         }
 
-        // Called the startup class in the Startup.cs
+        /// <summary>
+        /// Called the startup class in the Startup.cs and requests IHostBuilder to create the default builder for startup
+        /// </summary>
+        /// <returns></returns>
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
