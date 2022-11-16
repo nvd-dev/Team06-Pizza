@@ -79,6 +79,7 @@
                         </div>
                     </div>
                 </div>
+                @* The vote count for developer cards on the index page *@
                 <div class="modal-footer">
                     @if (voteCount == 0)
                     {
@@ -108,6 +109,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+@* Get the current rating of products and send it to the backend to update *@
 @code
 {
     ProductModel selectedProduct;
