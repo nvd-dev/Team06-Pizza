@@ -69,7 +69,7 @@ namespace UnitTests.Pages.Update
 
         #region OnPostAsync
         [Test]
-        public void OnPostAsync_ModelStateIsInvalid_Should_Return_APageResult()
+        public void OnPostAsync_ModelStateIsInvalid_Should_Return_PageResult()
         {
 
             // Arrange
@@ -101,7 +101,7 @@ namespace UnitTests.Pages.Update
         }
 
         [Test]
-        public void OnPostAsync_ModelStateIsValid_Should_Return_ARedirectToPageResult()
+        public void OnPostAsync_ModelStateIsValid_Should_Return_RedirectToPageResult()
         {
 
             // Arrange
