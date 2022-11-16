@@ -5,24 +5,14 @@
 
 <div class="container developer-container">
     <a class="btn btn-primary" href="/Create">+ Create</a>
-    <table class="table table-bordered table-striped">
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var product in ProductService.GetAllData())
-            {
-                <tr>
-                    <td>@product.Title</td>
-                    <td>
-                        <a class="btn btn-info" href="/Read/@product.Id">read</a>
-                        <a class="btn btn-primary" href="/update/@product.Id">update</a>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
+    @foreach (var product in ProductService.GetAllData())
+    {
+        <div class="developer-list">
+            <p>@product.Title</p>
+            <div class="btn-group">
+                <a class="btn btn-default" href="/Read/@product.Id">read</a>
+                <a class="btn btn-default" href="/update/@product.Id">update</a>
+            </div>
+        </div>
+    }
 </div>
