@@ -16,22 +16,31 @@ namespace ContosoCrafts.WebSite.Services
     public class JsonFileProductService
     {
 
-        // Constructor of product service class that use WebHostEnvironment to retrieve path of files
+        /// <summary>
+        /// Constructor of product service class that use WebHostEnvironment to retrieve path of files
+        /// </summary>
+        /// <param name="webHostEnvironment"></param>
         public JsonFileProductService(IWebHostEnvironment webHostEnvironment)
         {
             WebHostEnvironment = webHostEnvironment;
         }
-
-        // Keeping the IWebHostEnvironment after getting it passed in
+  
+        /// <summary>
+        /// Keeping the IWebHostEnvironment after getting it passed in
+        /// </summary>
         public IWebHostEnvironment WebHostEnvironment { get; }
 
-        // Retrive the Product.json file and let the WebHostEnvirontment know the path of Product.json
+        /// <summary>
+        /// Retrive the Product.json file and let the WebHostEnvirontment know the path of Product.json
+        /// </summary>
         private string JsonFileName
         {
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "products.json"); }
         }
 
-        // Method to return all the products by retrieving data from the JSON file, then convert JSON text to product object
+        /// </summary>
+        /// Method to return all the products by retrieving data from the JSON file, then convert JSON text to product object
+        /// </summary>
         public IEnumerable<ProductModel> GetAllData()
         {
             using (var jsonFileReader = File.OpenText(JsonFileName))
