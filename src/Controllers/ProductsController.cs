@@ -28,7 +28,10 @@ namespace ContosoCrafts.WebSite.Controllers
         // ProductService property getter
         public JsonFileProductService ProductService { get; }
 
-        // Get method to return all the product services
+        /// <summary>
+        /// Get method to return all the product services
+        /// </summary>
+        /// <returns> code 200 with JSON products </returns>
         [HttpGet]
         public IEnumerable<ProductModel> Get()
         {
