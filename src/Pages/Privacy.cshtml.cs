@@ -19,7 +19,9 @@ namespace ContosoCrafts.WebSite.Pages
             _logger = logger;
         }
 
-        // The method contains business logic if there's any
+        /// <summary>
+        /// The method contains business logic if there's any
+        /// </summary>
         public void OnGet()
         {
         }
