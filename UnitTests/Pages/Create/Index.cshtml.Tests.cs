@@ -53,7 +53,7 @@ namespace UnitTests.Pages.Create
 
         #region OnPostAsync
         [Test]
-        public void OnPostAsync_ModelStateIsInvalid_Should_Return_APageResult()
+        public void OnPostAsync_ModelStateIsInvalid_Should_Return_PageResult()
         {
             // Arrange
             var modelState = new ModelStateDictionary();
@@ -82,7 +82,7 @@ namespace UnitTests.Pages.Create
         }
 
         [Test]
-        public void OnPostAsync_ModelStateIsValid_Should_Return_ARedirectToPageResult()
+        public void OnPostAsync_ModelStateIsValid_Should_Return_RedirectToPageResult()
         {
             // Arrange
             var modelState = new ModelStateDictionary();
