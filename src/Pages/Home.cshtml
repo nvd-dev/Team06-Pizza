@@ -1,0 +1,41 @@
+﻿@page
+@using ContosoCrafts.WebSite.Components
+@model HomeModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="slideshow">
+        <img src="https://user-images.githubusercontent.com/47729520/200455507-2065e821-6c90-4535-b2a0-a343980720c0.jpeg" class="slide-img">
+    </div>
+
+    <div class="slideshow">
+        <img src="https://user-images.githubusercontent.com/47729520/200452872-f9f926a9-fe7f-4fe1-82c8-8b3e44ba03d5.jpg" class="slide-img">
+    </div>
+
+    <div class="slideshow">
+        <img src="https://user-images.githubusercontent.com/47729520/200452873-5922f8e0-1f15-43ba-893a-058aeccd4313.jpg" class="slide-img">
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+</div>
+<br>
+
+<h1>Available Developers</h1>
+@(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
+
+<script src="_framework/blazor.server.js"></script>
