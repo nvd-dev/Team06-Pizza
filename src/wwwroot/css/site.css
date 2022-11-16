@@ -283,3 +283,68 @@ ul {
     border-bottom-left-radius: unset;
     border-top-left-radius: unset;
 }
+
+/* for developer list */
+.developer-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    box-shadow: 5px 5px 15px #bbbbbb;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.developer-list a {
+    border: 1px solid #ccc;
+}
+
+.developer-list p {
+    margin: 0;
+    padding: 0;
+}
+
+/* for update & create page */
+.update-form {
+    width: 80%;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    box-shadow: 5px 5px 15px #bbbbbb;
+    background: white;
+}
+
+.update-form .submit {
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* for read page */
+.read-card {
+    width: 80%;
+    box-shadow: 5px 5px 15px #bbbbbb;
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.read-card img {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px 0;
+}
+
+.read-card .description {
+    margin-top: 10px;
+}
+
+.read-card a {
+    width: 30%;
+}
+
+/* for delete page */
+.delete-alert {
+    width: 80%;
+    margin: 10px auto;
+}
