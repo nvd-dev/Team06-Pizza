@@ -348,3 +348,20 @@ ul {
     width: 80%;
     margin: 10px auto;
 }
+
+/* for index page */
+.index-page {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.index-image {
+    width: 80%;
+}
+
+.index-page .btn-warning {
+    color: white;
+    margin-top: 10px;
+}
