@@ -17,13 +17,18 @@ namespace ContosoCrafts.WebSite.Pages
         // Getter and setter to the request ID from the query
         public string RequestId { get; set; }
 
-        // Check if requestId is valid
+        /// <summary>
+        /// Check if requestId is valid
+        /// </summary>
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
 
-        // Creates a logger
+        // Creates a logger for ErrorModel
         private readonly ILogger<ErrorModel> _logger;
 
-        // The contructor takes a logger as a parameter, this allows for using injection testing
+        /// <summary>
+        /// The contructor takes a logger as a parameter, this allows for using injection testing
+        /// </summary>
+        /// <param name="logger">logger dependecy for ErrorModel</param>
         public ErrorModel(ILogger<ErrorModel> logger)
         {
             _logger = logger;
