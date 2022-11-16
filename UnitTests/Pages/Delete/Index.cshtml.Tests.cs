@@ -72,7 +72,7 @@ namespace UnitTests.Pages.Create
 
         #region OnPostAsync
         [Test]
-        public void OnPostAsync_Should_Return_ARedirectToPageResult()
+        public void OnPostAsync_Should_Return_RedirectToPageResult()
         {
             // Arrange
 
