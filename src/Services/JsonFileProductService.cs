@@ -142,8 +142,12 @@ namespace ContosoCrafts.WebSite.Services
                 return null;
             }
 
-
-
+            // Update the data to the new passed in values
+            productData.Maker = data.Maker;
+            productData.Title = data.Title;
+            productData.Description = data.Description.Trim();
+            productData.Image = data.Image;
+            productData.Price = data.Price;
 
             SaveData(products);
 
