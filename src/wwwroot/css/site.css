@@ -365,3 +365,8 @@ ul {
     color: white;
     margin-top: 10px;
 }
+
+/* for required icon */
+.icon-required {
+    color: red;
+}
