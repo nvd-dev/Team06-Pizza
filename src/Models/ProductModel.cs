@@ -42,8 +42,8 @@ namespace ContosoCrafts.WebSite.Models
         //public string Quantity { get; set; }
 
         // A property contain the product's price
-        [Range(0, 10000, ErrorMessage = "Value for {0} must be between {1} and {2}.")]
-        public uint Price { get; set; }
+        [Range(0, 10000, ErrorMessage = "Value for {0} must be between {1} and {2}."), RegularExpression("^[0-9]+(.[0-9]{2})?$", ErrorMessage = "Value for {0} must have up to two decimal places")]
+        public double Price { get; set; }
 
         /// <summary>
         /// Convert ProductModel to Json String and store the Comments entered by the users on this product
