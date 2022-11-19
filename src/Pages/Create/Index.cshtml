@@ -8,19 +8,25 @@
     <form method="post">
         <input type="hidden" asp-for="Product.Id" />
         <div class="form-group">
+            <span class="icon-required">*</span>
             <label asp-for="Product.Maker" class="control-label"></label>
-            <input asp-for="Product.Maker" class="form-control" />
+            <input asp-for="Product.Maker" required class="form-control" />
+            <span asp-validation-for="Product.Maker" class="text-danger"></span>
         </div>
         <div class="form-group">
+            <span class="icon-required">*</span>
             <label asp-for="Product.Title" class="control-label"></label>
-            <input asp-for="Product.Title" class="form-control" />
+            <input asp-for="Product.Title" required class="form-control" />
             <span asp-validation-for="Product.Title" class="text-danger"></span>
         </div>
         <div class="form-group">
+            <span class="icon-required">*</span>
             <label asp-for="Product.Description" class="control-label"></label>
-            <textarea asp-for="Product.Description" class="form-control" rows="5"></textarea>
+            <textarea asp-for="Product.Description" required class="form-control" rows="5"></textarea>
+            <span asp-validation-for="Product.Description" class="text-danger"></span>
         </div>
         <div class="form-group">
+            <span class="icon-required">*</span>
             <label asp-for="Product.Price" class="control-label"></label>
             <input asp-for="Product.Price" class="form-control" />
             <span asp-validation-for="Product.Price" class="text-danger"></span>
@@ -40,4 +46,4 @@
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
-    }
+}
