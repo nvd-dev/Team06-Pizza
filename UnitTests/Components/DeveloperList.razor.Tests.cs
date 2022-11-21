@@ -13,7 +13,9 @@ namespace UnitTests.Components
     public class DeveloperListTests : BunitTestContext
     {
         #region TestSetup
-
+        /// <summary>
+        /// Setup test
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -22,6 +24,9 @@ namespace UnitTests.Components
         #endregion TestSetup
 
         #region DefaultContent
+        /// <summary>
+        /// test case for Rendering DeveloperList page
+        /// </summary>
         [Test]
         public void DeveloperList_Default_Should_Return_Content()
         {
@@ -29,13 +34,13 @@ namespace UnitTests.Components
             // Arrange
             Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
 
-            // Act
+            // Act, Rendering Component
             var page = RenderComponent<DeveloperList>();
 
-            // Get the Cards retrned
+            // Get the Page Content
             var result = page.Markup;
 
-            // Assert
+            // Assert, Determine whether the content of the page is correct
             Assert.AreEqual(true, result.Contains("Hiring a Python Developer"));
         }
         #endregion DefaultContent
