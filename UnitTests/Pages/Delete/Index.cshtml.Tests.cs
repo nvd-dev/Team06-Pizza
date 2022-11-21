@@ -17,9 +17,12 @@ namespace UnitTests.Pages.Create
     public class DeleteTests
     {
         #region TestSetup
-
+        // Page Model
         public static DeleteModel pageModel;
 
+        /// <summary>
+        /// Setup test
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -33,54 +36,60 @@ namespace UnitTests.Pages.Create
         #endregion TestSetup
 
         #region OnGet
+        /// <summary>
+        /// test case for OnGet method with Null Id
+        /// </summary>
         [Test]
         public void OnGet_InValid_Id_Null_Should_Return_ARedirectToPageResult()
         {
-            // Arrange
-
-            // Act
+            // Act. Call the OnGet method
             var result = pageModel.OnGet(null);
 
-            // Assert
+            // Assert. Judging whether the return is correct
             Assert.IsInstanceOf<RedirectToPageResult>(result);
         }
 
+        /// <summary>
+        /// test case for OnGet method with invalid Id
+        /// </summary>
         [Test]
         public void OnGet_InValid_Id_Should_Return_ARedirectToPageResult()
         {
-            // Arrange
-
-            // Act
+            // Act. Call the OnGet method
             var result = pageModel.OnGet("test");
 
-            // Assert
+            // Assert. Judging whether the return is correct
             Assert.IsInstanceOf<RedirectToPageResult>(result);
         }
 
+        /// <summary>
+        /// test case for OnGet method with valid Id
+        /// </summary>
         [Test]
         public void OnGet_Valid_Id_Should_Return_APageResult()
         {
-            // Arrange
-
-            // Act
+            // Act. Call the OnGet method
             var result = pageModel.OnGet("jenlooper-light");
 
-            // Assert
+            // Assert. Judging whether the return is correct
             Assert.IsInstanceOf<PageResult>(result);
         }
         #endregion OnGet
 
         #region OnPostAsync
+        /// <summary>
+        /// test case for OnPostAsync method
+        /// </summary>
         [Test]
         public void OnPostAsync_Should_Return_RedirectToPageResult()
         {
-            // Arrange
-
-            // Act
+            // Act. Get the data to delete
             pageModel.OnGet("jenlooper-light");
+
+            // Call the OnPostAsync method, delete data
             var result = pageModel.OnPostAsync();
 
-            // Assert
+            // Assert. Judging whether the return is correct
             Assert.IsInstanceOf<RedirectToPageResult>(result);
         }
         #endregion OnPostAsync
