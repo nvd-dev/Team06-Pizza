@@ -22,9 +22,12 @@ namespace UnitTests.Pages.Create
     public class CreateTests
     {
         #region TestSetup
-
+        // Page Model
         public static CreateModel pageModel;
 
+        /// <summary>
+        /// Setup test
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -38,12 +41,13 @@ namespace UnitTests.Pages.Create
         #endregion TestSetup
 
         #region OnGet
+        /// <summary>
+        /// test case for OnGet methon in Create Page
+        /// </summary>
         [Test]
         public void OnGet_Valid_Should_Create_Product()
         {
-            // Arrange
-
-            // Act
+            // Act. Call the OnGet method
             pageModel.OnGet();
 
             // Assert
@@ -52,10 +56,13 @@ namespace UnitTests.Pages.Create
         #endregion OnGet
 
         #region OnPostAsync
+        /// <summary>
+        /// test case for OnPostAsync method with invalid input
+        /// </summary>
         [Test]
         public void OnPostAsync_ModelStateIsInvalid_Should_Return_PageResult()
         {
-            // Arrange
+            // Arrange. Create submitted form
             var modelState = new ModelStateDictionary();
             var httpContext = new DefaultHttpContext();
             var tempData = new TempDataDictionary(httpContext, Mock.Of<ITempDataProvider>());
@@ -72,19 +79,24 @@ namespace UnitTests.Pages.Create
                 TempData = tempData,
                 Url = new UrlHelper(actionContext)
             };
+
+            // Set invalid input
             pageModel.ModelState.AddModelError("Product.Price", "Value for Price must be between -1 and 100.");
 
-            // Act
+            // Act. Call the OnPostAsync method. Submit Form
             var result = pageModel.OnPostAsync();
 
-            // Assert
+            // Assert. Judging whether the return is correct
             Assert.IsInstanceOf<PageResult>(result);
         }
 
+        /// <summary>
+        /// test case for OnPostAsync method with valid input
+        /// </summary>
         [Test]
         public void OnPostAsync_ModelStateIsValid_Should_Return_RedirectToPageResult()
         {
-            // Arrange
+            // Arrange. Create submitted form
             var modelState = new ModelStateDictionary();
             var httpContext = new DefaultHttpContext();
             var tempData = new TempDataDictionary(httpContext, Mock.Of<ITempDataProvider>());
@@ -102,11 +114,13 @@ namespace UnitTests.Pages.Create
                 Url = new UrlHelper(actionContext)
             };
 
-            // Act
+            // Act. Fill form data
             pageModel.OnGet();
+
+            // Act. Call the OnPostAsync method. Submit Form
             var result = pageModel.OnPostAsync();
 
-            // Assert
+            // Assert. Judging whether the return is correct
             Assert.IsInstanceOf<RedirectToPageResult>(result);
         }
         #endregion OnPostAsync
