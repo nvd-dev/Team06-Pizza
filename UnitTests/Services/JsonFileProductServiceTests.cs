@@ -13,7 +13,9 @@ namespace UnitTests.Pages.Product.AddRating
     public class JsonFileProductServiceTests
     {
         #region TestSetup
-
+        /// <summary>
+        /// Setup test
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -22,124 +24,115 @@ namespace UnitTests.Pages.Product.AddRating
         #endregion TestSetup
 
         #region AddRating
-        //[Test]
-        //public void AddRating_InValid_....()
-        //{
-        //    // Arrange
-
-        //    // Act
-        //    //var result = TestHelper.ProductService.AddRating(null, 1);
-
-        //    // Assert
-        //    //Assert.AreEqual(false, result);
-        //}
-
-        // ....
-
+        /// <summary>
+        /// test case for AddRating method with null product
+        /// </summary>
         [Test]
         public void AddRating_InValid_Product_Null_Should_Return_False()
         {
-            // Arrange
-
-            // Act
+            // Act. Call AddRating method
             var result = TestHelper.ProductService.AddRating(null, 1);
 
-            // Assert
+            // Assert. Judging whether the return is correct
             Assert.AreEqual(false, result);
         }
 
+        /// <summary>
+        /// test case for AddRating method with invalid product
+        /// </summary>
         [Test]
         public void AddRating_InValid_Product_Empty_Should_Return_False()
         {
-
-            // Arrange
-
-            // Act
+            // Act. Call AddRating method
             var result = TestHelper.ProductService.AddRating("", 1);
 
-            // Assert
+            // Assert. Judging whether the return is correct
             Assert.AreEqual(false, result);
         }
 
+        /// <summary>
+        /// test case for AddRating method with not exist product
+        /// </summary>
         [Test]
         public void AddRating_InValid_Product_NotExist_Should_Return_False()
         {
-
-            // Arrange
-
-            // Act
+            // Act. Call AddRating method
             var result = TestHelper.ProductService.AddRating("testid", 1);
 
-            // Assert
+            // Assert. Judging whether the return is correct
             Assert.AreEqual(false, result);
         }
 
+        /// <summary>
+        /// test case for AddRating method with valid product and rating below 0
+        /// </summary>
         [Test]
         public void AddRating_InValid_Product_Rating_Below0_Should_Return_False()
         {
-
-            // Arrange
-
             // Get the First data item
             var data = TestHelper.ProductService.GetAllData().First();
 
-            // Act
+            // Act. Call AddRating method
             var result = TestHelper.ProductService.AddRating(data.Id, -1);
 
-            // Assert
+            // Assert. Judging whether the return is correct
             Assert.AreEqual(false, result);
         }
 
+        /// <summary>
+        /// test case for AddRating method with valid product and rating above 5
+        /// </summary>
         [Test]
         public void AddRating_InValid_Product_Rating_Above5_Should_Return_False()
         {
-
-            // Arrange
-
             // Get the First data item
             var data = TestHelper.ProductService.GetAllData().First();
 
-            // Act
+            // Act. Call AddRating method
             var result = TestHelper.ProductService.AddRating(data.Id, 6);
 
-            // Assert
+            // Assert. Judging whether the return is correct
             Assert.AreEqual(false, result);
         }
 
+        /// <summary>
+        /// test case for AddRating method with valid product and first rating
+        /// </summary>
         [Test]
         public void AddRating_Valid_Product_Rating_5_NoneRating_Should_Return_True()
         {
-
-            // Arrange
-
             // Get the Last data item
             var data = TestHelper.ProductService.GetAllData().Last();
 
-            // Act
+            // Act. Call AddRating method
             var result = TestHelper.ProductService.AddRating(data.Id, 5);
+
+            // Get updated data
             var dataNewList = TestHelper.ProductService.GetAllData().Last();
 
-            // Assert
+            // Assert. Judging whether the return is correct
             Assert.AreEqual(true, result);
             Assert.AreEqual(1, dataNewList.Ratings.Length);
             Assert.AreEqual(5, dataNewList.Ratings.Last());
         }
 
+        /// <summary>
+        /// test case for AddRating method with valid product and valid rating
+        /// </summary>
         [Test]
         public void AddRating_Valid_Product_Rating_5_Should_Return_True()
         {
-
-            // Arrange
-
             // Get the First data item
             var data = TestHelper.ProductService.GetAllData().First();
             var countOriginal = data.Ratings.Length;
 
-            // Act
+            // Act. Call AddRating method
             var result = TestHelper.ProductService.AddRating(data.Id, 5);
+
+            // Get updated data
             var dataNewList = TestHelper.ProductService.GetAllData().First();
 
-            // Assert
+            // Assert. Judging whether the return is correct
             Assert.AreEqual(true, result);
             Assert.AreEqual(countOriginal + 1, dataNewList.Ratings.Length);
             Assert.AreEqual(5, dataNewList.Ratings.Last());
@@ -148,12 +141,12 @@ namespace UnitTests.Pages.Product.AddRating
         #endregion AddRating
 
         #region UpdateData
+        /// <summary>
+        /// test case for UpdateData method with null product
+        /// </summary>
         [Test]
         public void UpdateData_InValid_Product_Data_Null_Should_Return_null()
         {
-
-            // Arrange
-
             // create a data that NotExist
             var data = new ProductModel()
             {
@@ -164,69 +157,76 @@ namespace UnitTests.Pages.Product.AddRating
                 Image = "",
             };
 
-            // Act
+            // Act. Call UpdateData method
             var result = TestHelper.ProductService.UpdateData(data);
 
-            // Assert
+            // Assert. Judging whether the return is correct
             Assert.AreEqual(null, result);
         }
 
+        /// <summary>
+        /// test case for UpdateData method with valid product
+        /// </summary>
         [Test]
         public void UpdateData_Valid_Product_Data_Should_Return_NewProduct()
         {
-
-            // Arrange
-
             // Get the First data item
             var data = TestHelper.ProductService.GetAllData().First();
             data.Price = 10;
 
-            // Act
+            // Act. Call UpdateData method
             var result = TestHelper.ProductService.UpdateData(data);
+
+            // Get updated data
             var dataNew = TestHelper.ProductService.GetAllData().First();
 
-            // Assert
+            // Assert. Judging whether the return is correct
             Assert.AreEqual(dataNew.Price, result.Price);
         }
 
         #endregion UpdateData
 
         #region CreateData
+        /// <summary>
+        /// test case for CreateData method with valid product
+        /// </summary>
         [Test]
         public void CreateData_Valid_Product_Data_Should_Return_NewProduct()
         {
-
-            // Arrange
-
-            // Act
+            // Act. Call CreateData method
             var result = TestHelper.ProductService.CreateData();
+
+            // Get created data
             var dataNew = TestHelper.ProductService.GetAllData().Last();
 
-            // Assert
+            // Assert. Judging whether the return is correct
             Assert.AreEqual(dataNew.Id, result.Id);
         }
 
         #endregion CreateData
 
         #region CreateDataFromInput
+        /// <summary>
+        /// test case for CreateDataFromInput method with invalid product
+        /// </summary>
         [Test]
         public void CreateDataFromInput_InValid_Product_Data_Should_Return_null()
         {
-
-            // Arrange
-
-            // Act
+            // Act. Call CreateDataFromInput method
             var result = TestHelper.ProductService.CreateDataFromInput(null);
 
-            // Assert
+            // Assert. Judging whether the return is correct
             Assert.AreEqual(null, result);
         }
 
+        /// <summary>
+        /// test case for CreateDataFromInput method with valid product
+        /// </summary>
         [Test]
         public void CreateDataFromInput_Valid_Product_Data_Should_Return_NewProduct()
         {
 
-            // Arrange
+            // Arrange. Create new product
             var data = new ProductModel()
             {
                 Id = System.Guid.NewGuid().ToString(),
@@ -236,31 +236,32 @@ namespace UnitTests.Pages.Product.AddRating
                 Image = "",
             };
 
-            // Act
+            // Act. Call CreateDataFromInput method
             var result = TestHelper.ProductService.CreateDataFromInput(data);
+            // Get created data
             var dataNew = TestHelper.ProductService.GetAllData().Last();
 
-            // Assert
+            // Assert. Judging whether the return is correct
             Assert.AreEqual(dataNew.Id, result.Id);
         }
 
         #endregion CreateDataFromInput
 
         #region DeleteData
+        /// <summary>
+        /// test case for DeleteData method with valid product id
+        /// </summary>
         [Test]
         public void DeleteData_Valid_Product_ID_Should_Return_Product()
         {
-
-            // Arrange
-
             // Get the Last data item
             var data = TestHelper.ProductService.GetAllData().Last();
 
-            // Act
+            // Act. Call DeleteData method
             var result = TestHelper.ProductService.DeleteData(data.Id);
             var productData = TestHelper.ProductService.GetAllData().FirstOrDefault(x => x.Id.Equals(data.Id));
 
-            // Assert
+            // Assert. Judging whether the return is correct
             Assert.AreEqual(data.Id, result.Id);
             Assert.AreEqual(null, productData);
         }
@@ -268,30 +269,30 @@ namespace UnitTests.Pages.Product.AddRating
         #endregion DeleteData
 
         #region SearchData
+        /// <summary>
+        /// test case for SearchData method with invalid key
+        /// </summary>
         [Test]
         public void GetFilterData_InValid_Key_Should_Return_AllProducts()
         {
-
-            // Arrange
-
-            // Act
+            // Act. Call GetFilterData method
             var result = TestHelper.ProductService.GetFilterData(null);
             var allDatas = TestHelper.ProductService.GetAllData();
 
-            // Assert
+            // Assert. Judging whether the return is correct
             Assert.AreEqual(allDatas.Count(), result.Count());
         }
 
+        /// <summary>
+        /// test case for SearchData method with valid key
+        /// </summary>
         [Test]
         public void GetFilterData_Valid_Key_Should_Return_Products()
         {
-
-            // Arrange
-
-            // Act
+            // Act. Call GetFilterData method
             var result = TestHelper.ProductService.GetFilterData("Python");
 
-            // Assert
+            // Assert. Judging whether the return is correct
             Assert.AreEqual(1, result.Count());
         }
         #endregion SearchData
