@@ -17,8 +17,12 @@ namespace UnitTests.Pages.Error
     public class ErrorTests
     {
         #region TestSetup
+        // Page Model
         public static ErrorModel pageModel;
 
+        /// <summary>
+        /// Setup test
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -35,16 +39,18 @@ namespace UnitTests.Pages.Error
         #endregion TestSetup
 
         #region OnGet
+        /// <summary>
+        /// test case for OnGet method with valid activity
+        /// </summary>
         [Test]
         public void OnGet_Valid_Activity_Set_Should_Return_RequestId()
         {
 
-            // Arrange
-
+            // Arrange. Start activity
             Activity activity = new Activity("activity");
             activity.Start();
 
-            // Act
+            // Act. Call the OnGet method with valid id
             pageModel.OnGet();
 
             // Reset
@@ -55,16 +61,14 @@ namespace UnitTests.Pages.Error
             Assert.AreEqual(activity.Id, pageModel.RequestId);
         }
 
+        /// <summary>
+        /// test case for OnGet method with invalid activity
+        /// </summary>
         [Test]
         public void OnGet_InValid_Activity_Null_Should_Return_TraceIdentifier()
         {
-
-            // Arrange
-
             // Act
             pageModel.OnGet();
-
-            // Reset
 
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
