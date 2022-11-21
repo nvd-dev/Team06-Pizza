@@ -10,6 +10,9 @@ namespace UnitTests.Models
     public class CommentModelTests
     {
         #region TestSetup
+        /// <summary>
+        /// Setup test
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -17,6 +20,9 @@ namespace UnitTests.Models
         #endregion TestSetup
 
         #region Id
+        /// <summary>
+        /// Unit test to validate get and set methods of Comment Id with valid input
+        /// </summary>
         [Test]
         public void CommentModel_Valid_Id_Should_Return_Id()
         {
@@ -32,6 +38,9 @@ namespace UnitTests.Models
         #endregion Id
 
         #region Commen
+        /// <summary>
+        /// Unit test to validate get and set methods of Comment Comment with valid input
+        /// </summary>
         [Test]
         public void CommentModel_Valid_Comment_Should_Return_Comment()
         {
