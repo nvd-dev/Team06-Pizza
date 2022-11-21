@@ -22,9 +22,12 @@ namespace UnitTests.Pages.Update
     public class UpdateTests
     {
         #region TestSetup
-
+        // Page Model
         public static UpdateModel pageModel;
 
+        /// <summary>
+        /// Setup test
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -39,40 +42,44 @@ namespace UnitTests.Pages.Update
         #endregion TestSetup
 
         #region OnGet
+        /// <summary>
+        /// test case for OnGet method with valid Id
+        /// </summary>
         [Test]
-        public void OnGet_Valid_Should_Return_Products()
+        public void OnGet_Valid_Id_Should_Return_Products()
         {
-
-            // Arrange
-
-            // Act
+            // Act. Call the OnGet method with valid id
             pageModel.OnGet("jenlooper-cactus");
 
-            // Assert
+            // Assert. Determine whether the page data is correct
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
             Assert.AreEqual("jenlooper-cactus", pageModel.Product.Id);
         }
 
+        /// <summary>
+        /// test case for OnGet method with invalid Id
+        /// </summary>
         [Test]
         public void OnGet_InValid_Id_Should_Return_ARedirectToPageResult()
         {
-            // Arrange
-
-            // Act
+            // Act. Call the OnGet method with invalid id
             var result = pageModel.OnGet("test");
 
-            // Assert
+            // Assert. Judging whether the return is correct
             Assert.IsInstanceOf<RedirectToPageResult>(result);
         }
 
         #endregion OnGet
 
         #region OnPostAsync
+        /// <summary>
+        /// test case for OnPostAsync method with invalid input
+        /// </summary>
         [Test]
         public void OnPostAsync_ModelStateIsInvalid_Should_Return_PageResult()
         {
 
-            // Arrange
+            // Arrange. Create submitted form
             var modelState = new ModelStateDictionary();
             var httpContext = new DefaultHttpContext();
             var tempData = new TempDataDictionary(httpContext, Mock.Of<ITempDataProvider>());
@@ -91,20 +98,24 @@ namespace UnitTests.Pages.Update
                 Url = new UrlHelper(actionContext)
             };
 
+            // Set invalid input
             pageModel.ModelState.AddModelError("Product.Price", "Value for Price must be between -1 and 100.");
 
-            // Act
+            // Act. Call the OnPostAsync method. Submit Form
             var result = pageModel.OnPostAsync();
 
-            // Assert
+            // Assert. Judging whether the return is correct
             Assert.IsInstanceOf<PageResult>(result);
         }
 
+        /// <summary>
+        /// test case for OnPostAsync method with valid input
+        /// </summary>
         [Test]
         public void OnPostAsync_ModelStateIsValid_Should_Return_RedirectToPageResult()
         {
 
-            // Arrange
+            // Arrange. Create submitted form
             var modelState = new ModelStateDictionary();
             var httpContext = new DefaultHttpContext();
             var tempData = new TempDataDictionary(httpContext, Mock.Of<ITempDataProvider>());
@@ -123,11 +134,13 @@ namespace UnitTests.Pages.Update
                 Url = new UrlHelper(actionContext)
             };
 
-            // Act
+            // Act. Fill form data
             pageModel.OnGet("jenlooper-cactus");
+
+            // Act. Call the OnPostAsync method. Submit Form
             var result = pageModel.OnPostAsync();
 
-            // Assert
+            // Assert. Judging whether the return is correct
             Assert.IsInstanceOf<RedirectToPageResult>(result);
         }
 
