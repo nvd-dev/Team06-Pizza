@@ -10,6 +10,9 @@ namespace UnitTests.Models
     public class ProductTypeEnumModelTests
     {
         #region TestSetup
+        /// <summary>
+        /// Setup test
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -17,6 +20,9 @@ namespace UnitTests.Models
         #endregion TestSetup
 
         #region Amature
+        /// <summary>
+        /// Unit test to validate get and set methods of ProductTypeEnum Amature with valid input
+        /// </summary>
         [Test]
         public void ProductTypeEnumModel_Valid_Amature_Should_Return_Amature()
         {
@@ -32,6 +38,9 @@ namespace UnitTests.Models
         #endregion Amature
 
         #region Antique
+        /// <summary>
+        /// Unit test to validate get and set methods of ProductTypeEnum Antique with valid input
+        /// </summary>
         [Test]
         public void ProductTypeEnumModel_Valid_Antique_Should_Return_Antique()
         {
@@ -47,6 +56,9 @@ namespace UnitTests.Models
         #endregion Antique
 
         #region Collectable
+        /// <summary>
+        /// Unit test to validate get and set methods of ProductTypeEnum Collectable with valid input
+        /// </summary>
         [Test]
         public void ProductTypeEnumModel_Valid_Collectable_Should_Return_Collectable()
         {
@@ -62,6 +74,9 @@ namespace UnitTests.Models
         #endregion Collectable
 
         #region Commercial
+        /// <summary>
+        /// Unit test to validate get and set methods of ProductTypeEnum Commercial with valid input
+        /// </summary>
         [Test]
         public void ProductTypeEnumModel_Valid_Commercial_Should_Return_Commercial()
         {
@@ -77,6 +92,9 @@ namespace UnitTests.Models
         #endregion Commercial
 
         #region Null
+        /// <summary>
+        /// Unit test to validate get and set methods of ProductTypeEnum Null
+        /// </summary>
         [Test]
         public void ProductTypeEnumModel_Null_Should_Return_Null()
         {
