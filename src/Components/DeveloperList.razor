@@ -8,12 +8,45 @@
     @foreach (var product in ProductService.GetAllData())
     {
         <div class="developer-list">
-            <p>@product.Title</p>
-            <div class="btn-group">
-                <a class="btn btn-default" href="/Read/@product.Id">read</a>
-                <a class="btn btn-default" href="/update/@product.Id">update</a>
-                <a class="btn btn-default" href="/Delete/@product.Id">delete</a>
+            <div class="developer-title">
+                <p>@product.Title</p>
+            </div>
+            <div class="developer-content">
+                <div calss="content-left">
+                    <div>
+                        <span>Price: </span>
+                        <span>@product.Price</span>
+                    </div>
+                    <div>
+                        <span>Rating: </span>
+                        @if (product.Ratings == null)
+                        {
+                            <span>-</span>
+                        }
+                        @if (product.Ratings != null)
+                        {
+                            @for (int i = 1; i < 6; i++)
+                            {
+                                if (i <= (product.Ratings.Sum() / product.Ratings.Count()))
+                                {
+                                    <span class="fa fa-star checked"></span>
+                                }
+                                if (i > (product.Ratings.Sum() / product.Ratings.Count()))
+                                {
+                                    <span class="fa fa-star"></span>
+                                }
+                            }
+                        }
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-default" href="/Read/@product.Id">read</a>
+                    <a class="btn btn-default" href="/update/@product.Id">update</a>
+                    <a class="btn btn-default" href="/Delete/@product.Id">delete</a>
+                </div>
             </div>
         </div>
     }
 </div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
