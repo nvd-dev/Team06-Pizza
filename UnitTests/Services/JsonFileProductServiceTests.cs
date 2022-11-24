@@ -296,6 +296,82 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.AreEqual(1, result.Count());
         }
         #endregion SearchData
+
+        #region Sort Data By Price
+        /// <summary>
+        /// test case for GetSortedDataByPrice method with Ascending order
+        /// </summary>
+        [Test]
+        public void GetSortedDataByPrice_asc_Order_Should_Return_AllProducts_With_Ascending()
+        {
+            // Act. Call GetSortedDataByPrice method
+            var sortedDatas = TestHelper.ProductService.GetSortedDataByPrice(1);
+
+            // Assert. Judging whether the return is correct
+            Assert.AreEqual(true, sortedDatas.First().Price <= sortedDatas.Last().Price);
+        }
+
+        /// <summary>
+        /// test case for GetSortedDataByPrice method with Descending order
+        /// </summary>
+        [Test]
+        public void GetSortedDataByPrice_desc_Order_Should_Return_AllProducts_With_Descending()
+        {
+            // Act. Call GetSortedDataByPrice method
+            var sortedDatas = TestHelper.ProductService.GetSortedDataByPrice(-1);
+
+            // Assert. Judging whether the return is correct
+            Assert.AreEqual(true, sortedDatas.First().Price >= sortedDatas.Last().Price);
+        }
+        #endregion Sort Data By Price
+
+        #region Sort Data By Ratings
+        /// <summary>
+        /// test case for GetSortedDataByRatings method with Ascending order
+        /// </summary>
+        [Test]
+        public void GetSortedDataByRatings_asc_Order_Should_Return_AllProducts_With_Ascending()
+        {
+            // Act. Call GetSortedDataByRatings method
+            var sortedDatas = TestHelper.ProductService.GetSortedDataByRatings(2);
+
+            // Get the rating of the first data
+            var firstRating = 0;
+            // Get the rating of the last data
+            var lastRating = 0;
+            if (sortedDatas.Last().Ratings != null)
+            {
+                int[] ratings = sortedDatas.Last().Ratings;
+                lastRating = ratings.Sum() / ratings.Length;
+            }
+
+            // Assert. Judging whether the return is correct
+            Assert.AreEqual(true, firstRating <= lastRating);
+        }
+
+        /// <summary>
+        /// test case for GetSortedDataByRatings method with Dscending order
+        /// </summary>
+        [Test]
+        public void GetSortedDataByRatings_desc_Order_Should_Return_AllProducts_With_Descending()
+        {
+            // Act. Call GetSortedDataByRatings method
+            var sortedDatas = TestHelper.ProductService.GetSortedDataByRatings(-2);
+
+            // Get the rating of the first data
+            var firstRating = 0;
+            if (sortedDatas.First().Ratings != null)
+            {
+                int[] ratings = sortedDatas.First().Ratings;
+                firstRating = ratings.Sum() / ratings.Length;
+            }
+            // Get the rating of the last data
+            var lastRating = 0;
+
+            // Assert. Judging whether the return is correct
+            Assert.AreEqual(true, firstRating >= lastRating);
+        }
+        #endregion Sort Data By Ratings
     }
 
 }
