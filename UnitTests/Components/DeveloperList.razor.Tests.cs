@@ -5,8 +5,6 @@ using NUnit.Framework;
 using ContosoCrafts.WebSite.Components;
 using ContosoCrafts.WebSite.Services;
 using Bunit;
-using System.Linq;
-using AngleSharp.Dom;
 
 namespace UnitTests.Components
 {
