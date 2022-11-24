@@ -22,7 +22,7 @@
         "Ratings": [ 4, 3, 4, 3, 4, 3 ],
         "ProductType": 1,
         "Quantity": null,
-        "Price": 0,
+        "Price": 10,
         "CommentList": []
     },
     {
@@ -35,7 +35,7 @@
         "Ratings": null,
         "ProductType": 55,
         "Quantity": null,
-        "Price": 0,
+        "Price": 5,
         "CommentList": []
     },
     {
@@ -48,7 +48,7 @@
         "Ratings": null,
         "ProductType": 1,
         "Quantity": null,
-        "Price": 0,
+        "Price": 9,
         "CommentList": []
     },
     {
@@ -61,7 +61,7 @@
         "Ratings": null,
         "ProductType": 55,
         "Quantity": null,
-        "Price": 0,
+        "Price": 7,
         "CommentList": []
     },
     {
@@ -89,7 +89,7 @@
         "Ratings": null,
         "ProductType": 130,
         "Quantity": null,
-        "Price": 0,
+        "Price": 20,
         "CommentList": []
     },
     {
@@ -102,7 +102,7 @@
         "Ratings": null,
         "ProductType": 1,
         "Quantity": null,
-        "Price": 0,
+        "Price": 0.32,
         "CommentList": []
     },
     {
@@ -115,7 +115,7 @@
         "Ratings": null,
         "ProductType": 55,
         "Quantity": null,
-        "Price": 0,
+        "Price": 0.5,
         "CommentList": []
     },
     {
@@ -128,7 +128,7 @@
         "Ratings": null,
         "ProductType": 1,
         "Quantity": null,
-        "Price": 0,
+        "Price": 0.9,
         "CommentList": []
     },
     {
@@ -141,7 +141,7 @@
         "Ratings": [ 3, 5, 4, 3, 2, 4, 5, 3, 5, 4 ],
         "ProductType": 1,
         "Quantity": null,
-        "Price": 0,
+        "Price": 30,
         "CommentList": []
     },
     {
@@ -154,7 +154,7 @@
         "Ratings": null,
         "ProductType": 0,
         "Quantity": null,
-        "Price": 0,
+        "Price": 15,
         "CommentList": []
     },
     {
@@ -180,7 +180,7 @@
         "Ratings": null,
         "ProductType": 0,
         "Quantity": null,
-        "Price": 0,
+        "Price": 0.56,
         "CommentList": []
     },
     {
