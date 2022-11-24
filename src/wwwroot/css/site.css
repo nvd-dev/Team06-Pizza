@@ -6,11 +6,15 @@
   cursor: pointer;
 }
 
+.hide {
+  display: none;
+}
+
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 .card-columns .card:hover .card-img {
-  opacity: 1;
-  transform-style: preserve-3d;
+    opacity: 1;
+    transform-style: preserve-3d;
 }
 
 /* Card slide in Overlay from the bottom */
@@ -109,12 +113,17 @@ a {
   background-color: #e9a8a6;
   border-color: #e9a8a6;
 }
+.btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  color: #000000;
-  background-color: #000000;
-  border-color: #000000;
+    color: #000000;
+    background-color: #000000;
+    border-color: #000000;
 }
 
 /* Sticky footer styles
@@ -318,6 +327,17 @@ ul {
 
 .developer-content span {
     cursor: default;
+}
+
+.developer-sort {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: -15px;
+}
+
+.developer-sort button {
+    margin-left: 10px;
 }
 
 /* for update & create page */
