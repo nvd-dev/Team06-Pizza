@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text.Json;
 
 using ContosoCrafts.WebSite.Models;
-
 using Microsoft.AspNetCore.Hosting;
 
 namespace ContosoCrafts.WebSite.Services
@@ -69,6 +68,58 @@ namespace ContosoCrafts.WebSite.Services
             }
 
             return products.Where(x => x.Title.ToLower().Contains(key.ToLower()));
+        }
+
+        /// <summary>
+        /// Sort data by Price
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<ProductModel> GetSortedDataByPrice(int type)
+        {
+            var products = GetAllData();
+
+            if (type > 0)
+            {
+                return products.OrderBy(p => p.Price);
+            }
+            else
+            {
+                return products.OrderByDescending(p => p.Price);
+            }     
+        }
+
+        /// <summary>
+        /// Sort data by Ratings
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<ProductModel> GetSortedDataByRatings(int type)
+        {
+            var products = GetAllData();
+
+            if (type > 0)
+            {
+                return products.OrderBy(p =>
+                {
+                    if (p.Ratings == null)
+                    {
+                        return 0;
+                    }
+                    int[] ratings = p.Ratings;
+                    return ratings.Sum() / ratings.Length;
+                });
+            }
+            else
+            {
+                return products.OrderByDescending(p =>
+                {
+                    if (p.Ratings == null)
+                    {
+                        return 0;
+                    }
+                    int[] ratings = p.Ratings;
+                    return ratings.Sum() / ratings.Length;
+                });
+            }               
         }
 
         /// <summary>
