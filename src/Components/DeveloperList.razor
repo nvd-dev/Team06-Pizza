@@ -5,48 +5,164 @@
 
 <div class="container developer-container">
     <a class="btn btn-primary" href="/Create">+ Create</a>
-    @foreach (var product in ProductService.GetAllData())
+    <div class="developer-sort">
+        <span>Sorting: </span>
+        <button class="btn btn-default sort-by-price" @onclick="(e => SortDevelopersByPrice())">
+            <span>price</span>
+            @if (sortingTag == 1)
+            {
+                <span class="fa fa-sort-asc"></span>
+            }
+            @if (sortingTag == -1)
+            {
+                <span class="fa fa-sort-desc"></span>
+            }
+        </button>
+        <button class="btn btn-default sort-by-ratings" @onclick="(e => SortDevelopersByRatings())">
+            <span>ratings</span>
+            @if (sortingTag == 2)
+            {
+                <span class="fa fa-sort-asc"></span>
+            }
+            @if (sortingTag == -2)
+            {
+                <span class="fa fa-sort-desc"></span>
+            }
+        </button>
+        <button class="btn btn-default sort-reset" @onclick="(e => SortDevelopersReset())">reset</button>
+    </div>
+    @if (productLists == null)
     {
-        <div class="developer-list">
-            <div class="developer-title">
-                <p>@product.Title</p>
-            </div>
-            <div class="developer-content">
-                <div calss="content-left">
-                    <div>
-                        <span>Price: </span>
-                        <span>@product.Price</span>
-                    </div>
-                    <div>
-                        <span>Rating: </span>
-                        @if (product.Ratings == null)
-                        {
-                            <span>-</span>
-                        }
-                        @if (product.Ratings != null)
-                        {
-                            @for (int i = 1; i < 6; i++)
+        @foreach (var product in ProductService.GetAllData())
+        {
+            <div class="developer-list">
+                <div class="developer-title">
+                    <p>@product.Title</p>
+                </div>
+                <div class="developer-content">
+                    <div calss="content-left">
+                        <div>
+                            <span>Price: </span>
+                            <span>@product.Price</span>
+                        </div>
+                        <div>
+                            <span>Ratings: </span>
+                            @if (product.Ratings == null)
                             {
-                                if (i <= (product.Ratings.Sum() / product.Ratings.Count()))
+                                <span>-</span>
+                            }
+                            @if (product.Ratings != null)
+                            {
+                                @for (int i = 1; i < 6; i++)
                                 {
-                                    <span class="fa fa-star checked"></span>
-                                }
-                                if (i > (product.Ratings.Sum() / product.Ratings.Count()))
-                                {
-                                    <span class="fa fa-star"></span>
+                                    if (i <= (product.Ratings.Sum() / product.Ratings.Count()))
+                                    {
+                                        <span class="fa fa-star checked"></span>
+                                    }
+                                    if (i > (product.Ratings.Sum() / product.Ratings.Count()))
+                                    {
+                                        <span class="fa fa-star"></span>
+                                    }
                                 }
                             }
-                        }
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn btn-default" href="/Read/@product.Id">read</a>
+                        <a class="btn btn-default" href="/update/@product.Id">update</a>
+                        <a class="btn btn-default" href="/Delete/@product.Id">delete</a>
                     </div>
                 </div>
-                <div class="btn-group">
-                    <a class="btn btn-default" href="/Read/@product.Id">read</a>
-                    <a class="btn btn-default" href="/update/@product.Id">update</a>
-                    <a class="btn btn-default" href="/Delete/@product.Id">delete</a>
+            </div>
+        }
+    }
+    @if (productLists != null)
+    {
+        @foreach (var product in productLists)
+        {
+            <div class="developer-list">
+                <div class="developer-title">
+                    <p>@product.Title</p>
+                </div>
+                <div class="developer-content">
+                    <div calss="content-left">
+                        <div>
+                            <span>Price: </span>
+                            <span class="price">@product.Price</span>
+                        </div>
+                        <div>
+                            <span>Ratings: </span>
+                            @if (product.Ratings == null)
+                            {
+                                <span>-</span>
+                                <span class="hide ratings-count">0</span>
+                            }
+                            @if (product.Ratings != null)
+                            {
+                                @for (int i = 1; i < 6; i++)
+                                {
+                                    if (i <= (product.Ratings.Sum() / product.Ratings.Count()))
+                                    {
+                                        <span class="fa fa-star checked"></span>
+                                    }
+                                    if (i > (product.Ratings.Sum() / product.Ratings.Count()))
+                                    {
+                                        <span class="fa fa-star"></span>
+                                    }
+                                }
+                                <span class="hide ratings-count">@(product.Ratings.Sum() / product.Ratings.Count())</span>
+                            }
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn btn-default" href="/Read/@product.Id">read</a>
+                        <a class="btn btn-default" href="/update/@product.Id">update</a>
+                        <a class="btn btn-default" href="/Delete/@product.Id">delete</a>
+                    </div>
                 </div>
             </div>
-        </div>
+        }
     }
 </div>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+@code
+{
+    int sortingTag = 0;
+    IEnumerable<ProductModel> productLists;
+
+    void SortDevelopersByPrice()
+    {
+        if (Math.Abs(sortingTag) != 1)
+        {
+            sortingTag = 1;
+        }
+        else
+        {
+            sortingTag = sortingTag * -1;
+        }
+
+        productLists = ProductService.GetSortedDataByPrice(sortingTag);
+    }
+
+    void SortDevelopersByRatings()
+    {
+        if (Math.Abs(sortingTag) != 2)
+        {
+            sortingTag = 2;
+        }
+        else
+        {
+            sortingTag = sortingTag * -1;
+        }
+
+        productLists = ProductService.GetSortedDataByRatings(sortingTag);
+    }
+
+    void SortDevelopersReset()
+    {
+        sortingTag = 0;
+        productLists = ProductService.GetAllData();
+    }
+}
