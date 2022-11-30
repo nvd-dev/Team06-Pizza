@@ -9,6 +9,7 @@
         <div class="input-group">
             <input type="text" class="form-control" placeholder="Search for..." @bind="searchKey" @onkeypress="onKeyPress">
             <span class="input-group-btn">
+                <button class="btn btn-default seach-clear" type="button" @onclick="(e => ResetSearchProducts())">X</button>
                 <button class="btn btn-default search-action" type="button" @onclick="(e => SearchProducts())">Search</button>
             </span>
         </div>
@@ -128,6 +129,12 @@
 
     void SearchProducts()
     {
+        productLists = ProductService.GetFilterData(searchKey);
+    }
+
+    void ResetSearchProducts()
+    {
+        searchKey = "";
         productLists = ProductService.GetFilterData(searchKey);
     }
 
