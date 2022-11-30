@@ -101,6 +101,30 @@ namespace UnitTests.Components
         }
         #endregion SearchProducts
 
+        #region ResetSearchProducts
+        /// <summary>
+        /// test case for ResetSearchProducts function, Click the button
+        /// </summary>
+        [Test]
+        public void Product_Search_Reset_Should_Return_Content()
+        {
+            // Arrange
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+
+            // Act. Rendering Component
+            var page = RenderComponent<ProductList>();
+
+            // Click the search button
+            page.Find(".seach-clear").Click();
+
+            // Get the Search results
+            var result = page.Markup;
+
+            // Assert. Determine whether the search result is correct
+            Assert.AreEqual(true, result.Contains("Hiring a Python Developer"));
+        }
+        #endregion ResetSearchProducts
+
         #region SelectProduct
         /// <summary>
         /// Test case for popup rendering. Products with Null ratings
