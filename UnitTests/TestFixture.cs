@@ -54,11 +54,6 @@ namespace UnitTests
 
         }
 
-        [OneTimeTearDown]
-        public void RunAfterAnyTests()
-        {
-        }
-
     }
 
 }
