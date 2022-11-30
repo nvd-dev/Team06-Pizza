@@ -43,7 +43,7 @@ namespace ContosoCrafts.WebSite.Pages
 
             if (Product == null)
             {
-                return RedirectToPage("/Index");
+                return RedirectToPage("../Index");
             }
 
             return Page();
@@ -58,7 +58,7 @@ namespace ContosoCrafts.WebSite.Pages
 
             ProductService.DeleteData(Product.Id);
 
-            return RedirectToPage("/Index");
+            return RedirectToPage("/Developer");
         }
     }
 }
