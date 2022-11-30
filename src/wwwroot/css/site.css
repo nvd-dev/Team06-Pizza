@@ -1,13 +1,13 @@
 ﻿.checked {
-  color: orange;
+    color: orange;
 }
 
 .fa-star {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .hide {
-  display: none;
+    display: none;
 }
 
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
@@ -19,104 +19,106 @@ for details on configuring this project to bundle and minify static web assets. 
 
 /* Card slide in Overlay from the bottom */
 .overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #fbfafd;
-  overflow: hidden;
-  width: 100%;
-  height: 0;
-  transition: .5s ease;
-  font-family: "Nunito", sans-serif;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fbfafd;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    font-family: "Nunito", sans-serif;
 }
 
 .card-columns .card:hover .overlay {
-  height: 100%;
+    height: 100%;
 }
 
 .text {
-  color: black;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .btn-text {
-  color: black;
-  font-size: 20px;
-  top: 70%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  position: absolute;
-} 
+    color: black;
+    font-size: 20px;
+    top: 70%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
 
 .card-columns .card-body {
-  height: 100px;
-  font-family: "Nunito", sans-serif;
-  background: #fbfafd;
+    height: 100px;
+    font-family: "Nunito", sans-serif;
+    background: #fbfafd;
 }
 
 .card-columns .card-img {
-  height: 330px;
-  vertical-align: bottom;
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-  opacity: 0.8;
+    height: 330px;
+    vertical-align: bottom;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    opacity: 0.8;
 }
 
 .modal .card-img {
-  height: 500px;
-  vertical-align: bottom;
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+    height: 500px;
+    vertical-align: bottom;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
 }
 
 .card-columns .card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(37, 33, 82, 0.12),
-    0 4px 8px rgba(37, 33, 82, 0.06);
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(37, 33, 82, 0.12), 0 4px 8px rgba(37, 33, 82, 0.06);
 }
+
 .card-footer {
-  background: #fbfafd;
+    background: #fbfafd;
 }
 
 a.navbar-brand {
-  white-space: normal;
-  font-family: "Yellowtail", cursive;
-  font-size: xx-large;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    font-family: "Yellowtail", cursive;
+    font-size: xx-large;
+    text-align: center;
+    word-break: break-all;
 }
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+    color: #0366d6;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #252152;
-  border-color: #252152;
+    color: #fff;
+    background-color: #252152;
+    border-color: #252152;
 }
-.btn-primary:hover {
-  color: #fff;
-  background-color: #e9a8a6;
-  border-color: #e9a8a6;
-}
+
+    .btn-primary:hover {
+        color: #fff;
+        background-color: #e9a8a6;
+        border-color: #e9a8a6;
+    }
+
 .btn-default {
-  color: #333;
-  background-color: #fff;
-  border-color: #ccc;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
 }
 
 .nav-pills .nav-link.active,
@@ -129,57 +131,63 @@ a {
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
+
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .box-shadow {
-  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
 }
 
 button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+    font-size: 1rem;
+    line-height: inherit;
 }
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
 }
+
 p {
-  font-family: "Nunito", sans-serif;
+    font-family: "Nunito", sans-serif;
 }
+
 h1 {
-  font-family: "Nunito", sans-serif;
+    font-family: "Nunito", sans-serif;
 }
+
 ul {
-  font-family: "Nunito", sans-serif;
+    font-family: "Nunito", sans-serif;
 }
+
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
-  font-family: "Nunito", sans-serif;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+    font-family: "Nunito", sans-serif;
 }
 /*Backgrounds*/
 /*
@@ -199,11 +207,11 @@ ul {
 
 /* Change the Nav bar color*/
 .bg-navbar {
-  background: #f1ece1
+    background: #f1ece1
 }
 
 .bg-footer {
-  background: #f1ece1
+    background: #f1ece1
 }
 
 /* Homepage Slideshow */
@@ -277,20 +285,26 @@ ul {
     transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
-    background-color: #717171;
-}
+    .active, .dot:hover {
+        background-color: #717171;
+    }
 
 /* The search panel */
 .search-panel {
     margin-bottom: 10px;
 }
 
-.search-panel button {
-    border: 1px solid #ced4da;
-    border-left: none;
-    border-bottom-left-radius: unset;
-    border-top-left-radius: unset;
+    .search-panel button {
+        border: 1px solid #ced4da;
+        border-left: none;
+        border-bottom-left-radius: unset;
+        border-top-left-radius: unset;
+    }
+
+.seach-clear {
+    border-top-right-radius: unset;
+    border-bottom-right-radius: unset;
+    margin-right: -4px;
 }
 
 /* for developer list */
@@ -308,11 +322,11 @@ ul {
     padding: 10px;
 }
 
-.developer-title p {
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-}
+    .developer-title p {
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+    }
 
 .developer-list a {
     border: 1px solid #ccc;
@@ -325,9 +339,9 @@ ul {
     padding: 10px;
 }
 
-.developer-content span {
-    cursor: default;
-}
+    .developer-content span {
+        cursor: default;
+    }
 
 .developer-sort {
     display: flex;
@@ -336,9 +350,9 @@ ul {
     margin-bottom: -15px;
 }
 
-.developer-sort button {
-    margin-left: 10px;
-}
+    .developer-sort button {
+        margin-left: 10px;
+    }
 
 /* for update & create page */
 .update-form {
@@ -349,10 +363,10 @@ ul {
     background: white;
 }
 
-.update-form .submit {
-    width: 100%;
-    margin: 10px 0;
-}
+    .update-form .submit {
+        width: 100%;
+        margin: 10px 0;
+    }
 
 /* for read page */
 .read-card {
@@ -363,20 +377,20 @@ ul {
     border-radius: 4px;
 }
 
-.read-card img {
-    width: 100%;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 20px 0;
-}
+    .read-card img {
+        width: 100%;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 20px 0;
+    }
 
-.read-card .description {
-    margin-top: 10px;
-}
+    .read-card .description {
+        margin-top: 10px;
+    }
 
-.read-card a {
-    width: 30%;
-}
+    .read-card a {
+        width: 30%;
+    }
 
 /* for delete page */
 .delete-alert {
@@ -407,5 +421,5 @@ ul {
 }
 
 .logo-style {
-  width: 40px
+    width: 40px
 }
